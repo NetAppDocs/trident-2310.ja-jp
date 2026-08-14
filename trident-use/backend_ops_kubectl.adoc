@@ -16,6 +16,7 @@ summary: 'を使用してバックエンド管理処理を実行する方法に�
 
 
 
+[[delete-a-backend]]
 == バックエンドを削除します
 
 を削除する `TridentBackendConfig`を使用して、Astra Tridentにバックエンドの削除と保持を指示します（ベースはです） `deletionPolicy`）。バックエンドを削除するには、を確認します `deletionPolicy` は削除に設定されています。のみを削除します `TridentBackendConfig`を参照してください `deletionPolicy` はretainに設定されています。これにより、バックエンドがまだ存在し、を使用して管理できるようになります `tridentctl`。
@@ -30,6 +31,7 @@ Astra Tridentは、が使用していたKubernetesシークレットを削除し
 
 
 
+[[view-the-existing-backends]]
 == 既存のバックエンドを表示します
 
 次のコマンドを実行します。
@@ -42,6 +44,7 @@ kubectl get tbc -n trident
 
 
 
+[[update-a-backend]]
 == バックエンドを更新します
 
 バックエンドを更新する理由はいくつかあります。

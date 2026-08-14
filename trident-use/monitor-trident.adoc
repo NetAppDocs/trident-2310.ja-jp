@@ -16,6 +16,7 @@ Astra Tridentは、Astra Tridentのパフォーマンス監視に使用できる
 
 
 
+[[overview]]
 == 概要
 
 Astra Trident が提供する指標を使用すると、次のことが可能になります。
@@ -36,12 +37,14 @@ NOTE: デフォルトでは、Tridentの指標はターゲットポートで公�
 
 
 
+[[step-1-define-a-prometheus-target]]
 == 手順 1 ： Prometheus ターゲットを定義する
 
 Prometheus ターゲットを定義して指標を収集し、 Astra Trident が管理するバックエンド、作成するボリュームなどの情報を取得する必要があります。これ https://netapp.io/2020/02/20/prometheus-and-trident/["ブログ"^] Prometheus と Grafana を Astra Trident とともに使用して指標を取得する方法について説明します。このブログでは、KubernetesクラスタのオペレータとしてPrometheusを実行する方法と、Astra Tridentの指標を取得するためのServiceMonitorの作成について説明しています。
 
 
 
+[[step-2-create-a-prometheus-servicemonitor]]
 == 手順 2 ： Prometheus ServiceMonitor を作成します
 
 Tridentの指標を利用するには、を監視するPrometheus ServiceMonitorを作成する必要があります `trident-csi` サービスおよびリッスン `metrics` ポート：ServiceMonitor のサンプルは次のようになります。
@@ -74,6 +77,7 @@ Astra Tridentから直接取得できる指標に加えて、kubeletは多くの
 
 
 
+[[step-3-query-trident-metrics-with-promql]]
 == ステップ 3 ： PrompQL を使用して Trident 指標を照会する
 
 PrompQL は、時系列データまたは表データを返す式を作成するのに適しています。
@@ -82,6 +86,7 @@ PrompQL は、時系列データまたは表データを返す式を作成する
 
 
 
+[[get-trident-health-information]]
 === Trident の健常性情報を取得
 
 * ** Astra Trident からの HTTP 2XX 応答の割合 **
@@ -107,6 +112,7 @@ sum by (operation) (trident_operation_duration_milliseconds_sum{success="true"})
 ----
 
 
+[[get-astra-trident-usage-information]]
 === Astra Trident の使用状況に関する情報を入手
 
 * ** 平均体積サイズ **
@@ -125,6 +131,7 @@ sum (trident_volume_allocated_bytes) by (backend_uuid)
 ----
 
 
+[[get-individual-volume-usage]]
 === 個々のボリュームの使用状況を取得する
 
 
@@ -139,6 +146,7 @@ kubelet_volume_stats_used_bytes / kubelet_volume_stats_capacity_bytes * 100
 ----
 
 
+[[learn-about-astra-trident-autosupport-telemetry]]
 == Astra Trident AutoSupport の計測データ
 
 デフォルトでは、 Astra Trident は Prometheus 指標と基本バックエンド情報を毎日定期的にネットアップに送信します。
@@ -179,6 +187,7 @@ items:
 
 
 
+[[disable-astra-trident-metrics]]
 == Astra Trident の指標を無効化
 
 **メトリックがレポートされないようにするには、を使用してカスタムYAMLを生成する必要があります `--generate-custom-yaml` フラグを付けて編集し、を削除します `--metrics` に対する呼び出し元からのフラグ `trident-main`

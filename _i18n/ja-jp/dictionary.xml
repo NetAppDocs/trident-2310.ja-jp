@@ -473,19 +473,15 @@ SMBボリュームでは無視されます。</block>
   <block id="ad90b7d29d0d8a9c746868fe1f38ca90" category="paragraph">RWO、ROX、RWX、RWOP</block>
   <block id="ac7ba403929463ebd2aabb621c443399" category="section-title">Cloud Volumes Service for Google Cloudに対するAstra Tridentサポートの詳細をご確認ください</block>
   <block id="1d326a2a7f267c800fe3eafb89e5c7cd" category="inline-link-macro">サービスタイプ</block>
-  <block id="f391d05be666574cba6a6b88827e5766" category="paragraph">TridentがCloud Volumes Service ボリュームを作成できるのは、2つのうちの1つです <block ref="a3cd55e5a9ff014b76f6953040234c24" category="inline-link-macro-rx"></block>：</block>
   <block id="3671a5060127094ad405aad9295e6609" category="inline-link-macro">3つのサービスレベル</block>
-  <block id="9b44bc41471d2c2cc25eb7a9e5e01b49" category="list-text">* CVS - Performance *：デフォルトのAstra Tridentサービスタイプ。パフォーマンスが最適化されたこのサービスタイプは、パフォーマンスを重視する本番環境のワークロードに最適です。CVS -パフォーマンスサービスタイプは、サイズが100GiB以上のボリュームをサポートするハードウェアオプションです。のいずれかを選択できます <block ref="87d12cea36129673eb9128fd986958c5" category="inline-link-macro-rx"></block>：</block>
   <block id="1b3b34a1280074ca8311ff50bbacac6c" category="list-text"><block ref="c00f0c4675b91fb8b918e4079a0b1bac" prefix="" category="inline-code"></block></block>
   <block id="3f27980baf5bae9c9c40df09c54f6f23" category="list-text"><block ref="a288195832f8717bca4671416014a464" prefix="" category="inline-code"></block></block>
   <block id="091d891c1f040cef1072e2593b7f1f3b" category="list-text"><block ref="287e9593819b2fcdf9945e7ccacd637d" prefix="" category="inline-code"></block></block>
   <block id="1048ee58172376b84dda9c7505d858ea" category="inline-link-macro">2つのサービスレベル</block>
-  <block id="6c62a8c68facf167a61fbd54e9cceb5f" category="list-text">* CVS *：CVSサービスタイプは、中程度のパフォーマンスレベルに制限された高レベルの可用性を提供します。CVSサービスタイプは、ストレージプールを使用して1GiB未満のボリュームをサポートするソフトウェアオプションです。ストレージプールには最大50個のボリュームを含めることができ、すべてのボリュームでプールの容量とパフォーマンスを共有できます。のいずれかを選択できます <block ref="21d52e1e64b94d45bea308be30f5a76a" category="inline-link-macro-rx"></block>：</block>
   <block id="277d5dd64fbcc2dbcd79252b41d6113e" category="list-text"><block ref="317ec56a799e879712bbd2d0fcbd3b93" prefix="" category="inline-code"></block></block>
   <block id="4bfd77bf3278584b71bc8c9deef39ca9" category="list-text"><block ref="75b65576cc4a19f0836b73610ad5957a" prefix="" category="inline-code"></block></block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">必要なもの</block>
   <block id="b0cee72642f5457a71ddd0b49efb6d93" category="inline-link">Cloud Volumes Service for Google Cloud</block>
-  <block id="da195e41c537042ae77405110c4512ff" category="paragraph">を設定して使用します<block ref="5129d3f1116e9c5221bfcf965a1ede35" category="inline-link-rx"></block> バックエンドには次のものが必要です。</block>
   <block id="66d7ad821e261a4b5099f37ced19ebb1" category="list-text">NetApp Cloud Volumes Service で設定されたGoogle Cloudアカウント</block>
   <block id="2c00ff9c7700dc3529c57f0a5281bbe2" category="list-text">Google Cloud アカウントのプロジェクト番号</block>
   <block id="43752d169c5729fffa3a6557a0978cb8" category="list-text">を使用するGoogle Cloudサービスアカウント<block ref="4a5395c87dd91b3242056f83b7cedb9b" prefix=" " category="inline-code"></block> ロール</block>
@@ -754,9 +750,6 @@ NAEがバックエンドで有効になっている場合は、Astra Tridentで�
 詳細については、以下を参照してください。 <block ref="00deada136b55f176f599153703cf50d" category="inline-link-macro-rx"></block>。</block>
   <block id="b8ae61dc50cf8e8b79e68bc4a8d36393" category="cell"><block ref="0f179ba2bc32ab5d8f60692f5b800c86" prefix="" category="inline-code"></block></block>
   <block id="a56dcba8eacdac67fb510e1434d560d8" category="inline-link-macro">Linux Unified Key Setup（LUKS；統合キーセットアップ）を使用</block>
-  <block id="8336fb38c3b943161d5d6e73af8f4a12" category="cell">LUKS暗号化を有効にします。を参照してください <block ref="3646c7a69a11bdd94c010bf856bda313" category="inline-link-macro-rx"></block>。
-
-SANのみ。</block>
   <block id="31aa018945eb62580d68d360cba8ba54" category="cell"><block ref="a3e48f0594dda6037d37d52d343489b0" prefix="" category="inline-code"></block></block>
   <block id="58c09f2c9581bc7c58c32116266b6d8f" category="cell">使用する階層化ポリシー<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block></block>
   <block id="49ed5b3ecd0e966bec6b74083f06599e" category="cell"><block ref="8805d416ce540c5f2df34af5b18d742b" prefix="" category="inline-code"></block> ONTAP 9.5より前のSVM-DR構成の場合</block>
@@ -1162,7 +1155,6 @@ LUKS暗号化はNVMe/TCPではサポートされません。</block>
   <block id="9303b8f40cf82f5e37702c7a6387e725" category="section-title">ONTAP SANとNASドライバの統合</block>
   <block id="83d1f963158732d2aedc5119f242bcff" category="admonition">SMBボリュームについて設定する場合は、を参照してください <block ref="688177e6b45c5d27a545463079c58d82" category="inline-xref-macro-rx"></block> バックエンドを作成する前に。</block>
   <block id="ccb5eb98656346cbfa0b207e7d363bef" category="inline-link-macro">導入方法</block>
-  <block id="e2bcf5dc117f31569d413bd9b7698bf2" category="list-text">のいずれかを使用してAstra Tridentを導入 <block ref="71cad0f2a077aa26894105299bf47b53" category="inline-link-macro-rx"></block>。</block>
   <block id="c8aecc44e726368f30c6757e9ab5b64b" category="list-text">SVM管理LIFのDNS名を収集します。たとえば、AWS CLIを使用してを検索します<block ref="a3c3b30ab91f2501f21058ee87f27a4f" prefix=" " category="inline-code"></block> の下のエントリ<block ref="b8724da75fb917e992576b17378e66b3" prefix=" " category="inline-code"></block> -&gt;<block ref="fe4dbcab9b910577e5035e97ac068dae" prefix=" " category="inline-code"></block> 次のコマンドを実行した後：</block>
   <block id="ed625a73c7dbbe8b3d51e643adb7ddfd" category="inline-link-macro">NASバックエンド認証</block>
   <block id="cac491bba67bb09dddb8fa935c0ed9d6" category="inline-link-macro">SANバックエンド認証</block>
@@ -1505,7 +1497,6 @@ SMB</block>
   <block id="a5ddf1dcee266e65795efb120a45d2cb" category="section-title">共有ボリュームを削除</block>
   <block id="2b71b549a21992aba927484a35ad72f6" category="paragraph">複数のネームスペースで共有されているボリュームは削除できます。Tridentが、ソースネームスペースのボリュームへのアクセスを削除し、ボリュームを共有する他のネームスペースへのアクセスを維持します。ボリュームを参照するすべてのネームスペースが削除されると、Astra Tridentによってボリュームが削除されます。</block>
   <block id="3f8e335666124e3b7f5db07f03fef0b1" category="section-title">使用<block ref="fed7609223e8cae53e079facb24f3426" prefix=" " category="inline-code"></block> 下位のボリュームを照会する</block>
-  <block id="9f2f83b0c97d84774c1d61107283bb68" category="paragraph">を使用する<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> ユーティリティを使用すると、を実行できます<block ref="b5eda0a74558a342cf659187f06f746f" prefix=" " category="inline-code"></block> コマンドを使用して下位のボリュームを取得します。詳細については、リンク:./trident-reference/tridentctl.htmlを参照してください<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix="[" category="inline-code"></block> コマンドとオプション]。</block>
   <block id="1c90ba5cf3791b6148c7887a696911ec" category="paragraph">フラグ：</block>
   <block id="b1cc54ad6906d5f41516543bae01e46f" category="list-text"><block ref="490aa9b616d8535386ddf1c7037f79a0" prefix="" category="inline-code"></block>：ボリュームのヘルプ。</block>
   <block id="20668f390d13376c8d13ab4b20a53b5d" category="list-text"><block ref="e3bbbed29599d3e6e29ae22829ad7f13" prefix="" category="inline-code"></block>：クエリを下位のソースボリュームに制限します。</block>
@@ -1516,8 +1507,6 @@ SMB</block>
   <block id="3908892c437778f8b161a2ca006782cd" category="list-text">Snapshot、クローン、およびミラーリングは下位のボリュームでは実行できません。</block>
   <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="section-title">を参照してください。</block>
   <block id="8ff961668c6784e84b25c265cbb629d7" category="paragraph">ネームスペース間のボリュームアクセスの詳細については、次の資料を参照してください。</block>
-  <block id="f1cfea5f1444de607dfa549b3aa57010" category="inline-link-macro">ネームスペース間でのボリュームの共有：ネームスペース間のボリュームアクセスを許可する場合は「Hello」と入力します</block>
-  <block id="2780f690b7670efc296ac19ef3029d0c" category="list-text">にアクセスします <block ref="b0d29f1b2abb2cc552e4cc47177582ef" category="inline-link-macro-rx"></block>。</block>
   <block id="96e1384807331548bf745acde0fe1b73" category="inline-link-macro">ネットアップTV</block>
   <block id="c109878131f34375d85b7eff9721dcde" category="summary">ネットアップが提供する Trident インストールで Element バックエンドを作成して使用する方法をご確認ください。</block>
   <block id="62233a6f2ba54c1dcede120348a6f595" category="paragraph">Astra Tridentインストール環境でElementバックエンドを作成して使用する方法をご確認ください。</block>
@@ -1850,15 +1839,12 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">このタスクについて</block>
   <block id="4ff0a9f6065b24ce3d325bad3223f4e2" category="paragraph">Astra Trident のアンインストールと再インストールはアップグレードとして機能します。Trident をアンインストールしても、 Astra Trident 環境で使用されている Persistent Volume Claim （ PVC ；永続的ボリューム要求）と Persistent Volume （ PV ；永続的ボリューム）は削除されません。Astra Trident がオフラインの間は、すでにプロビジョニング済みの PVS を引き続き使用でき、 Astra Trident は、オンラインに戻った時点で作成された PVC に対してボリュームをプロビジョニングします。</block>
   <block id="d6b7a42c6c41b071d2c80b3e4c2a7edf" category="inline-link-macro">アップグレード方法を選択します</block>
-  <block id="ab639a35db468f671d4a76735e801015" category="paragraph">レビュー <block ref="5cffa5fbe758cc3901f0e33c78b29d1b" category="inline-link-macro-rx"></block> を使用してアップグレードする前に<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>。</block>
   <block id="a38e5a20ac16df242bdde92e028a100e" category="list-text">のアンインストールコマンドを実行します<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> CRDと関連オブジェクトを除くAstra Tridentに関連付けられているすべてのリソースを削除する。</block>
   <block id="e7447899210826e544345ba93e133255" category="inline-link-macro">tridentctl を使用して Astra Trident をインストールします</block>
-  <block id="0c147de2192f3060367ba5761742d227" category="list-text">Astra Tridentを再インストールします。を参照してください <block ref="d55139d84e0ac19d8211d27772e17544" category="inline-link-macro-rx"></block>。</block>
   <block id="1d2d1200e759d67b259f843be2270f71" category="admonition">アップグレードプロセスを中断しないでください。インストーラが完了するまで実行されることを確認します。</block>
   <block id="8a384610e551264beec3d337869d4c07" category="summary">Astra Tridentのアンインストールには、Astra Tridentのインストールと同じ方法を使用する必要があります。アップグレード、依存関係の問題、アップグレードの失敗や不完全な完了後に見つかったバグを修正する必要がある場合は、Astra Tridentをアンインストールし、そのバージョンに固有の手順を使用して以前のバージョンを再インストールする必要があります。</block>
   <block id="801bbd95fd335db15888ddc405e164f2" category="paragraph">Astra Tridentのアンインストールには、Astra Tridentのインストールと同じ方法を使用する必要があります。</block>
   <block id="2af72f100c356273d46284f6fd1dfc08" category="inline-link-macro">バージョン</block>
-  <block id="d4cb2483966fc1e61b1cddfccb87aada" category="list-text">アップグレード、依存関係の問題、アップグレードの失敗や不完全な完了後に観察されたバグの修正が必要な場合は、Astra Tridentをアンインストールし、該当する手順を使用して以前のバージョンを再インストールする必要があります。 <block ref="e168bf6cc8da3b05fae6b22bcd12ba37" category="inline-link-macro-rx"></block>。これは、以前のバージョンに_downgrade_toを実行するための唯一の推奨方法です。</block>
   <block id="660807cada2c8061fb92638cfe0568d0" category="list-text">アップグレードと再インストールを簡単に行うため、Astra Tridentをアンインストールしても、Astra Tridentで作成されたCRDや関連オブジェクトは削除されません。Astra Tridentとそのすべてのデータを完全に削除する必要がある場合は、を参照してください。 <block ref="9d95a644de0932ac2f909a32a488bd14" category="inline-link-macro-rx"></block>。</block>
   <block id="9558f7d0f1d8a03299b4e8190dc99a73" category="paragraph">Kubernetesクラスタの運用を停止する場合は、Astra Tridentで作成されたボリュームを使用するすべてのアプリケーションをアンインストールする前に削除する必要があります。これにより、PVCが削除される前にKubernetesノードで非公開になります。</block>
   <block id="298619534d23da6e9389fd113bb13495" category="section-title">元のインストール方法を決定する</block>
@@ -1882,11 +1868,8 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="566ef0ea3e228b1c501652e83def2c9d" category="paragraph">を使用します<block ref="fe98497efedbe156ecc4b953aea77e07" prefix=" " category="inline-code"></block> のコマンド<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> CRDと関連オブジェクトを除くAstra Tridentに関連付けられているすべてのリソースを削除するには、次の手順を実行します。</block>
   <block id="dec54888538ac86f51d29a3d043e6bf6" category="summary">既存の Astra Trident インストールは、オペレータが簡単にアップグレードできます。</block>
   <block id="7a15e63f1d0efc213151254bbc1b2d0d" category="doc">Tridentオペレータのインストールをアップグレード</block>
-  <block id="0f443eb922735ce52f2b490ffca00e49" category="paragraph">Astra Tridentは、Tridentオペレータを使用して手動またはHelmを使用してアップグレードできます。Tridentオペレータのインストール環境から別のTridentオペレータのインストール環境へのアップグレード、または<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> Tridentオペレータバージョンへのインストールレビュー <block ref="5cffa5fbe758cc3901f0e33c78b29d1b" category="inline-link-macro-rx"></block> Tridentオペレータのインストールをアップグレードする前に</block>
   <block id="3ef75911ec16a9d0ba70cfd4e68dcb71" category="section-title">手動インストールのアップグレード</block>
   <block id="aa33f1094363f0d5dc3ca342e19ec6e0" category="paragraph">クラスタを対象としたTridentオペレータインストールから、クラスタを対象とした別のTridentオペレータインストールにアップグレードできます。すべてのAstra Tridentバージョン21.01以降では、クラスタを対象とした演算子を使用します。</block>
-  <block id="b0e74afe1fdeb605b5c47b501c43b71b" category="inline-link-macro">インストールされているバージョン</block>
-  <block id="4642420c93e6091ce8421e89a16fd80d" category="admonition">ネームスペースを対象としたオペレータ（バージョン20.07~20.10）を使用してインストールされたAstra Tridentからアップグレードするには、次のアップグレード手順を使用してください： <block ref="567dd1ff029f25a404a69ff1e3c8d83b" category="inline-link-macro-rx"></block> 実績があります。</block>
   <block id="eb7a4fa3d9aff7ec5b23abb8b82d516b" category="paragraph">Tridentにはバンドルファイルが用意されています。このファイルを使用して、オペレータをインストールしたり、Kubernetesバージョンに対応する関連オブジェクトを作成したりできます。</block>
   <block id="bd2cc8575fe69c7f775292759380c838" category="inline-link-macro">Bundle_pre_1_25.yaml</block>
   <block id="70c1e6c61f5bb4daad5da0737987b584" category="list-text">クラスタでKubernetes 1.24以前を実行している場合は、を使用します <block ref="a44a6c98120e356ed433b4f8492681f5" category="inline-link-macro-rx"></block>。</block>
@@ -1901,7 +1884,6 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="a5fd2691a6a5df653970895b1c5045ed" category="section-title">Helmインストールのアップグレード</block>
   <block id="3ae662c67d403e6230b019a96e787b63" category="paragraph">Astra Trident Helmのインストールをアップグレードできます。</block>
   <block id="2776a355e79f6256fa8b6a84044ebc66" category="inline-link-macro">Helmを使用したAstra Tridentのインストール</block>
-  <block id="dec90c165180e4428352d04efba76d8b" category="list-text">あなたの場合 <block ref="701383cb184d92daac13becc67e9c1be" category="inline-link-macro-rx"></block>を使用できます。<block ref="00f73970d66f7ceaea7519a201d88dc8" prefix=" " category="inline-code"></block> 1つの手順でアップグレードできます。Helmリポジトリを追加しなかった場合、またはHelmリポジトリを使用してアップグレードできない場合は、次の手順を実行します。</block>
   <block id="a1142049a82a11e90102d655bb7e234d" category="inline-link-macro">GitHubの_Assets_sectionを参照してください</block>
   <block id="fd55ae3db3b16ceeb447f43dc713fb27" category="list-text">次のサイトからAstra Tridentの最新リリースをダウンロードしてください： <block ref="6a7c34d1e7545bd3ab5abc336e61eb7f" category="inline-link-macro-rx"></block>。</block>
   <block id="7ef5fe31142052af801d70088b7c81a1" category="list-text">を使用します<block ref="cd01e1bae83933b9c59c914bc71332ac" prefix=" " category="inline-code"></block> コマンドを入力します<block ref="2bf502a148116cde5482ac78e1580a82" prefix=" " category="inline-code"></block> アップグレード後のバージョンが反映されます。</block>
@@ -1910,7 +1892,6 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="613909529798c8a2543da8e954e5d742" category="section-title">からのアップグレード<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> Tridentオペレータへのインストール</block>
   <block id="9142b40107d9c5a0b86ef0ce8c25a88b" category="paragraph">からTridentの最新リリースにアップグレードできます<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> インストール：既存のバックエンドとPVCは自動的に使用可能になります。</block>
   <block id="dd341f866eaefb939dc86608773c909d" category="inline-link-macro">インストール方法を切り替える</block>
-  <block id="89b46b05bfce8415b6a6373a93a0b04e" category="admonition">インストール方法を切り替える前に、 <block ref="d7d87809bc6e1001ccd94c7433d28fd5" category="inline-link-macro-rx"></block></block>
   <block id="3002cfcea36b7fb4d87da4d413730851" category="list-text">最新の Astra Trident リリースをダウンロード</block>
   <block id="4ab464bddccdcbc36fab4cea802025f9" category="list-text">を作成します<block ref="de2dc323226e711fbec4c5c39eeac5b8" prefix=" " category="inline-code"></block> マニフェストからのCRD。</block>
   <block id="71530aef1814290453dc7add3bdae349" category="list-text">クラスタを対象としたオペレータを同じネームスペースに導入します。</block>
@@ -2049,7 +2030,6 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="ce42d65061b497ce09f8f7253a47d3ec" category="paragraph">Astra Tridentの最初のインストールに使用したバージョンを確認するには、次の手順を実行します。</block>
   <block id="dccfb2ce978b2c73d6a7308a124d0043" category="section-title">ステップ3：アップグレード方法を選択します</block>
   <block id="74652b96889938fdef1037f82abf39b0" category="inline-link-macro">インストール方法を切り替えます</block>
-  <block id="ae0da380d74bf3d71ac89124c088358a" category="paragraph">通常は、最初のインストールと同じ方法でアップグレードする必要がありますが、可能です <block ref="e34c010032791417159012a5e31d7540" category="inline-link-macro-rx"></block>。Tridentをアップグレードする方法は2つあります。</block>
   <block id="441b9a0ce7113f17c0021f9922b1c865" category="inline-link-macro">Tridentオペレータを使用してアップグレード</block>
   <block id="672218727121432fb7209f42c6a00514" category="list-text"><block ref="672218727121432fb7209f42c6a00514" category="inline-link-macro-rx"></block></block>
   <block id="a81c3a8630da0b8548245caae368a3c2" category="inline-link-macro">オペレータのアップグレードワークフローについて理解する</block>
@@ -2060,13 +2040,11 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="3d40f2a5a694e68fd88105fc4f5ee0d4" category="section-title">Tridentオペレータのアップグレード処理</block>
   <block id="74e51c48d68796e06830c062f5c955c1" category="inline-link-macro">Tridentオペレータを使用するメリット</block>
   <block id="99c73e527698ab76b32674b7e9dd4708" category="inline-link-macro">ローリング更新</block>
-  <block id="bec1352836ad67ce44ee000c83d4dae1" category="paragraph">多数のうちの1つ <block ref="1294f86abdf2591159d9dd04918b1092" category="inline-link-macro-rx"></block> Astra Tridentのインストールとアップグレードは、既存のマウントボリュームを停止することなく、Astra TridentとKubernetesのオブジェクトを自動的に処理します。これにより、Astra Tridentはダウンタイムなしでアップグレードをサポートできます。 <block ref="c0fb6b6f12bb8ae805a97690328ec023" category="inline-link-macro-rx"></block>。TridentオペレータはKubernetesクラスタと通信して次のことを行います。</block>
   <block id="1a1508da73374db3dd227799f48fdf63" category="list-text">Trident Controller環境とノードデーモンセットを削除して再作成します。</block>
   <block id="88b9e59609789e4bf00d72c8be9dd376" category="list-text">TridentコントローラポッドとTridentノードポッドを新しいバージョンに置き換えます。</block>
   <block id="6d3156de6583a452ead75c70c186fcb8" category="list-text">更新されていないノードは、残りのノードの更新を妨げません。</block>
   <block id="e232b75d1eb891caededece68ccba4bd" category="list-text">ボリュームをマウントできるのは、Trident Node Podを実行しているノードだけです。</block>
   <block id="c350769115c3c8e4132e9c428b166b12" category="inline-link-macro">Astra Tridentのアーキテクチャ</block>
-  <block id="74a95a8eea4566dad9e480f5e1defb1e" category="admonition">KubernetesクラスタのAstra Tridentアーキテクチャの詳細については、 <block ref="3663c9ca295bfa48935631bb67d2ba2e" category="inline-link-macro-rx"></block>。</block>
   <block id="672bc0defc3e808ff4066a5bb35984ff" category="section-title">オペレータのアップグレードワークフロー</block>
   <block id="09fca30aacc5af8d0afe600848776412" category="paragraph">Tridentオペレータを使用してアップグレードを開始すると、次の処理が実行されます。</block>
   <block id="de1c3bc7b6551ded8e26b3c59f25fd6a" category="list-text">Trident演算子*：</block>
@@ -2088,7 +2066,6 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="7416271d47db3d82227ab2164e43c75c" category="list-text">Astra Tridentは、SAN環境でマルチパス構成を厳密に使用し、推奨される値をに設定します<block ref="db729c5c8df447087e5a84b961df14f6" prefix=" " category="inline-code"></block> multipath.confファイル内。</block>
   <block id="ef911ad0da9f5477ca7ec7af0ba4181a" category="paragraph">インストールパスに関係なく、次のものが必要です。</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link-macro">要件</block>
-  <block id="3f2851ece89063ca1615062ac2117a4e" category="list-text">サポートされているバージョンのKubernetesと機能の要件を有効にして実行されている、サポートされるKubernetesクラスタに対するすべての権限。を確認します <block ref="3675fd04b78685cacd6e23511ab11d10" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="071d9becf308917b53d70c09e7da51b6" category="list-text">サポートされているネットアップストレージシステムへのアクセス。</block>
   <block id="19eb712f406fc64109f96d9cf4055cb9" category="list-text">Kubernetesワーカーノードすべてからボリュームをマウントできます。</block>
   <block id="5f35b91e200cda68bf700d65b89c2c73" category="list-text">を搭載したLinuxホスト<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block> （または<block ref="fb024832e51eb5f6da9113a745f1eb59" prefix=" " category="inline-code"></block>OpenShiftを使用している場合）Kubernetesクラスタを管理するようにインストールおよび設定します。</block>
@@ -2096,13 +2073,10 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="dd3de2609b612d76ef4c71b97b8d6100" category="inline-link">CLI へのアクセスを有効にする手順は、ユーザが行ってください</block>
   <block id="c585967fa32d82c5e3c24bd63926c6a0" category="list-text">Kubernetes と Docker Enterprise を併用する場合は、<block ref="57562caf1c76e1a261b7e2f8c3d113f9" category="inline-link-rx"></block>。</block>
   <block id="4a052772dca278b7be31d54ca9f21831" category="inline-link-macro">基本概念</block>
-  <block id="f73c8e5f81fc3213cf0bc8c399979852" category="admonition">に慣れていない場合は <block ref="0342248ee22d08eaf42465a29ddd67ec" category="inline-link-macro-rx"></block>今こそ、そのための絶好の機会です。</block>
   <block id="a24b4ef46f44c1b54b99e62f49bef9af" category="section-title">インストール方法を選択します</block>
   <block id="dcb987a2d08ee1a9198d1183b1a63a96" category="inline-link-macro">メソッド間を移動しています</block>
-  <block id="e11c9248bc5d43c6663f67955adbc53b" category="paragraph">適切なインストール方法を選択します。また、に関する考慮事項についても確認しておく必要があります <block ref="e6ce874bf5f421a383109cc222a74763" category="inline-link-macro-rx"></block> 決定する前に。</block>
   <block id="bd1cc9ebdb33ed22a54815219f97af08" category="section-title">Trident演算子を使用する</block>
   <block id="b2ad529645b5bea51c4bcd516a5c5c8f" category="inline-link-macro">Tridentのオペレータ環境をカスタマイズ</block>
-  <block id="938620f641cb8e0eead448105ff52780" category="paragraph">Tridentのオペレータは、手動で導入する場合でも、Helmを使用する場合でも、Astra Tridentのリソースを動的に管理して簡単にインストールできます。それは可能である <block ref="5290e5312b651716bedf8a83ec5a6467" category="inline-link-macro-rx"></block> で属性を使用する<block ref="ae61bf6af1a7406b62c72a4bef1ab62d" prefix=" " category="inline-code"></block> カスタムリソース（CR）。</block>
   <block id="9d2c1d92b0ecb606394b40e3553d07d2" category="paragraph">Tridentオペレータには次のようなメリットがあります。</block>
   <block id="636fc797e6d4f9b558107df8ad867cc7" category="example-title">&lt;strong&gt; Astra Tridentオブジェクト作成&lt;/strong&gt;</block>
   <block id="9bb09894435f05fa667865ab4c45ace7" category="paragraph">Tridentオペレータが、Kubernetesのバージョンに応じて次のオブジェクトを自動的に作成します。</block>
@@ -2124,8 +2098,6 @@ IPv6フラグを使用してAstra Tridentをインストールした場合は、
   <block id="f456a413d0506028374e871768a5f176" category="paragraph">Kubernetes バージョンのクラスタをサポート対象バージョンにアップグレードすると、オペレータが既存の Astra Trident インストールを自動的に更新し、 Kubernetes バージョンの要件を確実に満たすように変更します。</block>
   <block id="d1aae6ea63eb5e7fe6a9fcea5f671406" category="admonition">クラスタがサポート対象外のバージョンにアップグレードされた場合、オペレータによって Astra Trident はインストールされません。Astra Trident がすでにオペレータとともにインストールされている場合、サポート対象外の Kubernetes バージョンに Astra Trident がインストールされていることを示す警告が表示されます。</block>
   <block id="c3b2fe84f143129d7a18ad12df229bc6" category="example-title">BlueXP（旧Cloud Manager）&lt;/strong&gt; を使用した&lt;strong&gt; Kubernetesクラスタ管理</block>
-  <block id="fd1117c82327fbe8671f26e897ceb8f4" category="inline-link-macro">Astra TridentでBlueXPを使用</block>
-  <block id="a76a1e164520105317267dc41b95e8ce" category="paragraph">を使用 <block ref="f8c16e8c21124ccc028d2db7fd32a98f" category="inline-link-macro-rx"></block>では、最新バージョンのAstra Tridentにアップグレードし、ストレージクラスを追加して管理し、作業環境に接続し、Cloud Backup Service を使用して永続的ボリュームをバックアップすることができます。BlueXPは、Tridentオペレータを使用したAstra Tridentの導入を、手動またはHelmを使用してサポートしています。</block>
   <block id="8492a795a07bc459d58808ef0ab73c36" category="section-title">を使用します<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block></block>
   <block id="43e6c0a141c1737a96917c56c7e22a73" category="inline-link-macro">&lt;block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category='inline-code'/&gt; を使用したインストール</block>
   <block id="1a2de31d648d8c09e5c2a9257a5ad67b" category="paragraph">既存の環境をアップグレードする必要がある場合や、高度にカスタマイズすることを検討している場合は、アップグレードを検討する必要があります <block ref="e214bf159dbaf6573cfe15f1373b92db" category="inline-link-macro-rx"></block>。これは、従来の方法であった Astra Trident を導入する方法です。</block>
@@ -2277,9 +2249,7 @@ Astra Trident</block>
   <block id="9b809d56a3bb0caddcd0793e74d8e636" category="paragraph">を使用して、Astra Tridentをインストールできます<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>。このプロセスでは、Astra Tridentで必要なコンテナイメージがプライベートレジストリに格納されているかどうかに関係なく、環境 のインストールを実行します。をカスタマイズします<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> 配置については、を参照してください  <block ref="8e7a26c9800a78fa0b68fb2423ba3fb4" category="inline-link-macro-rx"></block>。</block>
   <block id="61697702c419c08b19643e7defded065" category="section-title">を使用してAstra Tridentをインストールします<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block></block>
   <block id="3342f1a2f74c6062a39d3076c35c5a5b" category="inline-link-macro">インストールの概要</block>
-  <block id="6657de3ab3deaeef939684c50d5310e3" category="paragraph">レビュー <block ref="17128a3e349370ba21c9ca13ca0bc297" category="inline-link-macro-rx"></block> インストールの前提条件を満たし、環境に適したインストールオプションを選択していることを確認します。</block>
   <block id="ea8cda06a0e70ad34c1b9ab1b7135105" category="inline-link-macro">サポートされる Kubernetes クラスタ</block>
-  <block id="953aeeea088f5f969f2eba121ae81f15" category="paragraph">インストールを開始する前に、Linuxホストにログインして、管理が機能していることを確認します。 <block ref="ac355729d1ddc95a290738ca862fed08" category="inline-link-macro-rx"></block> 必要な権限があることを確認します。</block>
   <block id="e420b75ec3bc014e3f69c43b2383768b" category="admonition">OpenShiftでは、を使用します<block ref="fb024832e51eb5f6da9113a745f1eb59" prefix=" " category="inline-code"></block> ではなく<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block> 以降のすべての例では、を実行して、最初に* system:admin *としてログインします<block ref="924132b4cedac6927feecff33e0a8e17" prefix=" " category="inline-code"></block> または<block ref="42c32f65d2d1c08a83fbc226da30a162" prefix=" " category="inline-code"></block>。</block>
   <block id="92e83bca2bb40324de35154f8c95083d" category="list-text">Kubernetesのバージョンを確認します。</block>
   <block id="b17eef151a74252395aad7db4b148b57" category="list-text">クラスタ管理者の権限を確認します。</block>
@@ -2298,13 +2268,11 @@ Astra Trident</block>
   <block id="474d9cf1b4e7f826154b0e1f35c59f5a" category="section-title">ポッドの作成ステータスを使用する</block>
   <block id="726f87e7b7987ccf71570849c59ae750" category="paragraph">作成したポッドのステータスを確認することで、Astra Tridentのインストールが完了したかどうかを確認できます。</block>
   <block id="5ba19178fb1b2111306714e923b35945" category="inline-link-macro">デバッグモードをオンにします</block>
-  <block id="43e7d51a6323aabe7af3d192e157f5ed" category="admonition">インストーラが正常に完了しない場合、または<block ref="ce3abad3e11d6a43c5178e20a0c7d64b" prefix=" " category="inline-code"></block> <block ref="2903817a25b5de1e17a06122d71c5cf9" prefix="(" category="inline-code"></block> 23.01より前のバージョンでは、* RUNNING *ステータスがありません。プラットフォームはインストールされませんでした。使用<block ref="9b017020b9d48d433ec90c548e6b5c70" prefix=" " category="inline-code"></block> 終了：  <block ref="82f062b46969132d4baf9d002395a676" category="inline-link-macro-rx"></block> および問題 のトラブルシューティングを行います。</block>
   <block id="af78a296b63187cfcb391c6b5b7ab9ae" category="paragraph">を使用できます<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> インストールされているAstra Tridentのバージョンを確認します。</block>
   <block id="9a9da6e778ab07cf0f1fe8db100e7e75" category="paragraph">以下に、Astra Tridentをインストールするための設定例を示します。<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>。</block>
   <block id="d5999fd61d148b96e54f154a54ffead5" category="example-title">Windowsノオト</block>
   <block id="f53514cf8829a41463c245b088ae732e" category="paragraph">WindowsノードでAstra Tridentを実行できるようにするには、次の手順を実行します。</block>
   <block id="ecb7d1d46da3859c69f45b619ace746a" category="example-title">強制的に切り離し</block>
-  <block id="c5b5b00ff1b3a892c8694ab932cbf9ca" category="paragraph">強制切り離しの詳細については、を参照してください <block ref="63cac71755fb6ef1f1fea34cf4037121" category="inline-link-macro-rx"></block>。</block>
   <block id="9023b4b442239b429817bc22fb401e02" category="summary">Tridentオペレータを導入し、Helmを使用してAstra Tridentをインストールできます。このプロセスでは、環境 をインストールする際に、Astra Tridentで必要なコンテナイメージがプライベートレジストリに格納されます。</block>
   <block id="3e8935de45b1559e2ec2b01c1bbb06c2" category="doc">Helm（オフラインモード）を使用したTridentのオペレータの導入</block>
   <block id="11ad6eeb0e6095efdbf4599d71303b0e" category="inline-link-macro">標準的な導入のプロセス</block>
@@ -2314,7 +2282,6 @@ Astra Trident</block>
   <block id="2f5480efe7a0a4b0cffbf110abec11c2" category="paragraph">Tridentの使用 <block ref="cdacb2b0d49176a3c0d8cc9d693de833" category="inline-link-macro-rx"></block> Tridentオペレータを導入し、Tridentを一度にインストールできます。</block>
   <block id="8f3958d59b8da100a4663b1cace112b7" category="inline-link-macro">導入の前提条件</block>
   <block id="2e1b3f44683eee188be985693c4af5e1" category="inline-link-macro">Helm バージョン 3</block>
-  <block id="64d2af40480a5cebf7e64939f6253bf3" category="paragraph">に加えて <block ref="c7282b7e52e27c635b613335e59bf436" category="inline-link-macro-rx"></block> 必要です <block ref="fc0cdbd8defe0c7175199dd05a0f8e76" category="inline-link-macro-rx"></block>。</block>
   <block id="113fbd468c6aaecfbef57e5d1e9b500d" category="list-text">Astra Trident Helmリポジトリを追加します。</block>
   <block id="b3735f022036728c24121c449da97183" category="inline-link-macro">TridentとCSIの画像</block>
   <block id="28988f0a59f621eb11ed592b70156da2" category="list-text">使用<block ref="0562418e6d9a76d0dd22b2f186a2203d" prefix=" " category="inline-code"></block> 展開およびイメージレジストリの場所の名前を指定します。。 <block ref="57de9a35aeedde82408b1e047030d221" category="inline-link-macro-rx"></block> 1つのレジストリまたは別のレジストリに配置できますが、すべてのCSIイメージは同じレジストリに配置する必要があります。例では、<block ref="84976609aebb6439476255d5ef8280bb" prefix=" " category="inline-code"></block> は、インストールするAstra Tridentのバージョンです。</block>
@@ -2463,7 +2430,6 @@ Astra Trident。オペレータはこの状態からのリカバリを自動的�
   <block id="4bdf9319fbd791503ac6c31b80a89220" category="summary">Tridentオペレータが手動で導入してAstra Tridentをインストールできます。このプロセスでは、環境 をインストールする際に、Astra Tridentで必要なコンテナイメージがプライベートレジストリに格納されます。</block>
   <block id="44e21d73aa8bd7200fceac6671723524" category="doc">Tridentオペレータを手動で導入（オフラインモード）</block>
   <block id="3410d56c3ae45b01726f4f271693484f" category="paragraph">Tridentオペレータが手動で導入してAstra Tridentをインストールできます。このプロセスでは、環境 をインストールする際に、Astra Tridentで必要なコンテナイメージがプライベートレジストリに格納されます。プライベートイメージレジストリがない場合は、を使用します <block ref="0d70fdec6fbaf15c3c460970c31207c9" category="inline-link-macro-rx"></block>。</block>
-  <block id="bcc71769dd00af93bb067088094d9b0b" category="paragraph">Linuxホストにログインして、管理が機能していることとを確認します <block ref="ac355729d1ddc95a290738ca862fed08" category="inline-link-macro-rx"></block> 必要な権限があることを確認します。</block>
   <block id="04bed90b9e7d65b6d7dd48211e0a9f6c" category="paragraph">を作成します<block ref="ae61bf6af1a7406b62c72a4bef1ab62d" prefix=" " category="inline-code"></block> カスタムリソース定義（CRD）。を作成します<block ref="ae61bf6af1a7406b62c72a4bef1ab62d" prefix=" " category="inline-code"></block> カスタムリソース。で適切なCRD YAMLバージョンを使用します<block ref="91ff3926f7c7983bb4a56689f631e6c9" prefix=" " category="inline-code"></block> を作成します<block ref="ae61bf6af1a7406b62c72a4bef1ab62d" prefix=" " category="inline-code"></block> CRD：</block>
   <block id="ad9aaefb573cd08d43c2b039449b1f0e" category="section-title">手順3：オペレータのレジストリの場所を更新します</block>
   <block id="fe9b1493a507da1dc0bfa19fbf9c5180" category="paragraph">インチ<block ref="02f3115b006f7541a477d52ea8c0f861" prefix=" " category="inline-code"></block>、を更新します<block ref="4dd6592b70080d91fec96acc5ba0327e" prefix=" " category="inline-code"></block> イメージレジストリの場所を反映します。。 <block ref="57de9a35aeedde82408b1e047030d221" category="inline-link-macro-rx"></block> 1つのレジストリまたは別のレジストリに配置できますが、すべてのCSIイメージは同じレジストリに配置する必要があります。例：</block>
@@ -2523,7 +2489,6 @@ Astra Trident。オペレータはこの状態からのリカバリを自動的�
   <block id="8447c4879970f03c99a2bec36a05c141" category="summary">Trident の REST API を使用する場合は、 REST エンドポイントを直接使用できます。</block>
   <block id="a0ebcf8495639418ba9d4b85dbb67b8b" category="doc">Astra Trident REST API</block>
   <block id="319c1a7b5479ffa2a028b658ad5b7033" category="inline-link-macro">tridentctl コマンドとオプション</block>
-  <block id="bd75dd911fd79061ecd2d46e65ed7f74" category="paragraph">間 <block ref="8321852d17a287399cb52ef30f4b21eb" category="inline-link-macro-rx"></block> Trident REST APIを使用するには、RESTエンドポイントを直接使用する方法が最も簡単です。</block>
   <block id="7a72a102c2990b674624e8b6ec834e4d" category="section-title">REST APIを使用する状況</block>
   <block id="d08436e363d4793fd6a0de3022ebfd63" category="paragraph">REST APIは、Kubernetes以外の環境でAstra Tridentをスタンドアロンバイナリとして使用する高度なインストールに役立ちます。</block>
   <block id="14dc7970933630896b0232f2a8b52039" category="paragraph">セキュリティ強化のため、Astra Tridentをぜひご利用ください<block ref="aba3d4b49c454e1974970e7b5514b001" prefix=" " category="inline-code"></block> ポッド内で実行されている場合は、デフォルトでlocalhostに制限されます。この動作を変更するには、Astra Tridentを設定する必要があります<block ref="38df54fe961fa2bf2a7f82a5854fabad" prefix=" " category="inline-code"></block> 引数をポッド構成で指定します。</block>
@@ -2731,7 +2696,6 @@ ontap-nas-flexgroup、ontap-san、gcp-cvs</block>
   <block id="5faae6e509c8aecf9f8815a4ceef02b3" category="list-text">アイドルボリュームのクローンを作成することを推奨します。</block>
   <block id="f89d76e06e88814705882a1faad838fb" category="list-text">PVC とそのクローンは、同じ Kubernetes ネームスペースに存在し、同じストレージクラスを持つ必要があります。</block>
   <block id="f769a6b54b1d1476b6628ebd1c4b98c4" category="list-text">を使用<block ref="8321592ce24c8a122ecf26a63cfca407" prefix=" " category="inline-code"></block> および<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block> ドライバが必要な場合は、PVC注釈を設定することをお勧めします<block ref="46ec89aa5290ead7b514dd5182caa0a7" prefix=" " category="inline-code"></block> と組み合わせて使用します<block ref="979f70bf9da982ee97ac075df4f048c3" prefix=" " category="inline-code"></block>。を使用<block ref="46ec89aa5290ead7b514dd5182caa0a7" prefix=" " category="inline-code"></block> をに設定します<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>Tridentでは、クローニングされたボリュームを親ボリュームからスプリットするため、ストレージ効率を維持しないまま、クローニングされたボリュームのライフサイクルを完全に分離します。設定されていません<block ref="46ec89aa5290ead7b514dd5182caa0a7" prefix=" " category="inline-code"></block> またはに設定します<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 親ボリュームとクローンボリューム間の依存関係を作成するのではなく、バックエンドのスペース消費が削減されます。そのため、クローンを先に削除しないかぎり親ボリュームを削除できません。クローンをスプリットするシナリオでは、空のデータベースボリュームをクローニングする方法が効果的です。このシナリオでは、ボリュームとそのクローンで使用するデータベースボリュームのサイズが大きく異なっており、 ONTAP ではストレージ効率化のメリットはありません。</block>
-  <block id="5f117d85f5b23527c781bb26a4b15109" category="paragraph">。<block ref="75e4a0ceb294a9d74374c938e4e8ddc8" prefix=" " category="inline-code"></block> Directoryには、Tridentで使用するPVC定義の例が含まれています。を参照してください <block ref="62155edb2842dfbdb69802620baa3865" category="inline-xref-macro-rx"></block> をクリックして、Tridentボリュームに関連付けられているパラメータと設定の完全な概要を確認します。</block>
   <block id="40f23ed795a1a88d4da7ac2ef847ff7f" category="section-title">Kubernetes<block ref="858e55ea2e6429120a862313c50a9f5f" prefix=" " category="inline-code"></block> オブジェクト</block>
   <block id="6cb5412cc2fe8210c4d14d6d6b08ab79" category="paragraph">Kubernetesを<block ref="858e55ea2e6429120a862313c50a9f5f" prefix=" " category="inline-code"></block> オブジェクトは、Kubernetesクラスタで使用可能になるストレージを表します。ポッドに依存しないライフサイクルがあります。</block>
   <block id="292289b7334983e53d9fb9bd00d30820" category="admonition">Tridentが実現<block ref="858e55ea2e6429120a862313c50a9f5f" prefix=" " category="inline-code"></block> オブジェクトを作成し、プロビジョニングするボリュームに基づいてKubernetesクラスタに自動的に登録します。自分で管理することは想定されていません。</block>
@@ -2935,7 +2899,6 @@ ontap-nas-flexgroup、ontap-san、gcp-cvs</block>
   <block id="b0434693308513b990bcffe2314d6fb5" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Astra Trident をインストール</block>
   <block id="c8fce1b550592f1b2285ab7a61547927" category="paragraph">Astra Tridentには、さまざまな環境や組織に最適化された複数のインストール方法とモードが用意されています。</block>
   <block id="f1fe71442cd08e74d342114df7ee1551" category="inline-link-macro">Astra Trident をインストール</block>
-  <block id="f15ffbfcd0e5a0ad91ac171f83121ff4" category="paragraph"><block ref="f15ffbfcd0e5a0ad91ac171f83121ff4" category="inline-link-macro-rx"></block></block>
   <block id="2d15dd50ddfe5e28746975645a5652ca" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> ワーカーノードを準備します</block>
   <block id="aba4bc9d3bde7d18b07c23d5c7d0f495" category="paragraph">Kubernetesクラスタ内のすべてのワーカーノードが、ポッド用にプロビジョニングしたボリュームをマウントできる必要があります。</block>
   <block id="f36d25716a4b2c466ddcb8065bef3ae6" category="paragraph"><block ref="f36d25716a4b2c466ddcb8065bef3ae6" category="inline-link-macro-rx"></block></block>
@@ -2997,7 +2960,6 @@ ontap-nas-flexgroup、ontap-san、gcp-cvs</block>
   <block id="1bc6462cd59612636c72620a6a67410b" category="admonition">Kubernetesを初めて使用する場合は、 <block ref="41eecc10f74d492dbf2a2c207d5acb1b" category="inline-link-macro-rx"></block>。</block>
   <block id="b513091c9ef80c504ca4004f0f33cee7" category="section-title">Astra TridentのTest Driveプログラム</block>
   <block id="e8dadc588901af436e2c6036acf23973" category="inline-link-macro">ネットアップのテスト用ドライブ</block>
-  <block id="67d2e4eb35b7300690ac2b14677e2fad" category="paragraph">Test Driveプログラムを利用するには、「コンテナ化されたワークロード向けの永続的ストレージの簡単な導入とクローニング」へのアクセスをリクエスト <block ref="eb9c34df0ed196dd801ef85207c8bf2c" category="inline-link-macro-rx"></block> すぐに使用できるラボイメージを使用する。このテストドライブは、3ノードのKubernetesクラスタとAstra Tridentがインストールおよび設定されたサンドボックス環境を提供します。これは、Astra Tridentについて理解を深め、その機能を確認するための優れた方法です。</block>
   <block id="8685ac2061f9dca7ab48f41e0871f7af" category="inline-link-macro">kubeadm インストールガイド</block>
   <block id="3ff64d30b8ccd0f89740b2ba54cf8bf3" category="paragraph">もう1つのオプションは、 <block ref="c7dbb75618a5e106a360075f923cb87f" category="inline-link-macro-rx"></block> Kubernetes が提供します。</block>
   <block id="80f4cfbe493e12651c3514c9481ce1ee" category="admonition">これらの手順を使用して構築したKubernetesクラスタは、本番環境では使用しないでください。本番環境向けクラスタ向けに、ディストリビューションから提供されている本番環境導入ガイドを使用します。</block>
@@ -3030,12 +2992,10 @@ ontap-nas-flexgroup、ontap-san、gcp-cvs</block>
   <block id="cb462a22682d8f02b65abeb6ce8bda89" category="paragraph"><block ref="35a6b548833df39b8bbc748563b1938b" category="inline-link-rx"></block> Kubernetes 上で実行される大量のデータコンテナ化ワークロードを、パブリッククラウドとオンプレミスの間で簡単に管理、保護、移動できます。Astraは、パブリッククラウドとオンプレミスで実績のある広範なNetAppストレージポートフォリオからTridentを使用して永続的コンテナストレージをプロビジョニング、提供します。また、 Snapshot 、バックアップとリストア、アクティビティログ、アクティブクローニングによるデータ保護、ディザスタ / データリカバリ、データ監査、 Kubernetes ワークロードの移行のユースケースなど、アプリケーションに対応した高度なデータ管理機能も豊富に搭載されています。</block>
   <block id="54ad97548183fc7d802b6db88573701f" category="paragraph">ONTAPは、NetAppのマルチプロトコルユニファイドストレージオペレーティングシステムで、あらゆるアプリケーションに高度なデータ管理機能を提供します。ONTAP システムには、オールフラッシュ、ハイブリッド、オール HDD のいずれかの構成が採用されており、自社開発のハードウェア（ FAS と AFF ）、ノーブランド製品（ ONTAP Select ）、クラウドのみ（ Cloud Volumes ONTAP ）など、さまざまな導入モデルが用意されています。</block>
   <block id="cbb7697b4f6f189240d043ff70ca133c" category="admonition">Trident は、上記の ONTAP 導入モデルをすべてサポートしています。</block>
-  <block id="5c04ffbd0c110bf7b37d6b95eb756b75" category="paragraph"><block ref="700b45b9fca207b66f675c8d5dfb073b" category="inline-link-rx"></block> は、クラウドで ONTAP データ管理ソフトウェアを実行するソフトウェア型ストレージアプライアンスです。Cloud Volumes ONTAP は、本番ワークロード、ディザスタリカバリ、 DevOps 、ファイル共有、データベース管理に使用できます。ストレージ効率、高可用性、データレプリケーション、データ階層化、アプリケーションの整合性を提供することで、エンタープライズストレージをクラウドに拡張します。</block>
   <block id="f8869dc9dbb397ea76e820ae99f70217" category="paragraph"><block ref="6a2736fcbb5755dd03d114a5153506eb" category="inline-link-rx"></block> は、NetApp ONTAPストレージオペレーティングシステムを基盤とするファイルシステムを起動して実行できる、フルマネージドのAWSサービスです。FSx for ONTAPを使用すると、使い慣れたNetAppの機能、パフォーマンス、管理機能を活用しながら、AWSにデータを保存する際のシンプルさ、即応性、セキュリティ、拡張性を活用できます。FSx for ONTAPは、ONTAPのファイルシステム機能と管理APIの多くをサポートしています。</block>
   <block id="1fdf61a8f946268990d8e15dd9069a6d" category="paragraph"><block ref="eca39b018af81e7b5c8e71b5b4aa3790" category="inline-link-rx"></block> ストレージ管理者は、パフォーマンスを保証し、ストレージの設置面積を合理化することで、ワークロードを統合できます。Element と API を組み合わせることでストレージ管理のあらゆる要素を自動化できるため、ストレージ管理者は少ない労力で多くの作業を行うことができます。</block>
   <block id="25f221cc63a7e1fa55b05c29420a72a2" category="paragraph"><block ref="2841e7defe3939e68d83d007d1ad666b" category="inline-link-rx"></block> 日常業務を自動化し、インフラ管理者がより重要な業務に集中できるようにすることで、データセンターの管理と拡張を簡易化します。</block>
   <block id="be17f8b9c728a6cb61cad5a2609b3888" category="paragraph">NetApp HCI は Trident によって完全にサポートされています。Trident では、コンテナ化されたアプリケーション用のストレージデバイスを、基盤となる NetApp HCI ストレージプラットフォームに直接プロビジョニングして管理できます。</block>
-  <block id="a1515efe69d0ac9d979af2bdfc068934" category="paragraph"><block ref="68704f3321dd8ca7029c03c29da7736a" category="inline-link-rx"></block> は、 NFS や SMB 経由で NAS ボリュームにオールフラッシュのパフォーマンスを提供する、クラウドネイティブのファイルサービスです。このサービスにより、従来型アプリケーションを含むあらゆるワークロードをGCPクラウドで実行できます。フルマネージドサービスを提供し、一貫したハイパフォーマンス、瞬時のクローニング、データ保護、 Google Compute Engine （ GCE ）インスタンスへのセキュアなアクセスを実現します。</block>
   <block id="901977c62370814085e1228ede1e5919" category="summary">Astra Tridentをインストールする前に、次の一般的なシステム要件を確認してください。個 々 のバックエンドには追加の要件がある場合があり</block>
   <block id="822293db528ee892466bd05ecce74b14" category="section-title">Astra Tridentに関する重要な情報</block>
   <block id="35e81072b264abffa70dd885aca7e585" category="list-text">TridentでKubernetes 1.28がサポートされるようになりました。Kubernetesをアップグレードする前にAstra Tridentをアップグレードしてください。</block>
@@ -3592,10 +3552,8 @@ QoS ポリシーグループはバックエンドまたはストレージプー�
   <block id="965b11d07d6acceebc9efec23e5e74a9" category="section-title">NetAppテクニカルサポート</block>
   <block id="8ef0ab9bbedaa7608c9abed7c7213218" category="paragraph">Astra Tridentのサポートを受けるには、を使用してサポートバンドルを作成してください<block ref="1d41e2024c69110ad6054ffc785ca8e0" prefix=" " category="inline-code"></block> に送信します<block ref="da34ca64df3f236a423516102d4096c2" prefix=" " category="inline-code"></block>。</block>
   <block id="6394eceb2639574114b02e6e817eb19a" category="inline-link-macro">Astra ブログ</block>
-  <block id="44c86da066b2aa1cdbeb7ae4dcc42baf" category="list-text"><block ref="44c86da066b2aa1cdbeb7ae4dcc42baf" category="inline-link-macro-rx"></block></block>
   <block id="a7266bb27e7415b120f5e25460dc32fe" category="list-text"><block ref="a7266bb27e7415b120f5e25460dc32fe" category="inline-link-macro-rx"></block></block>
   <block id="874d8a5301794a9ca2aba132ac2460f3" category="inline-link-macro">Kubernetes ハブ</block>
-  <block id="8f4c1b75985ff2903107b7115115ea58" category="list-text"><block ref="8f4c1b75985ff2903107b7115115ea58" category="inline-link-macro-rx"></block></block>
   <block id="d59c00abbeaf33a9a094b3a69c563405" category="inline-link-macro">netapp.io のコマンドです</block>
   <block id="b86b16f39688f208b4a554adb7958c46" category="list-text"><block ref="b86b16f39688f208b4a554adb7958c46" category="inline-link-macro-rx"></block></block>
   <block id="3d522b99ca94333433532daa23e7ceab" category="summary">Trident が提供する Astra のインストール、設定、アップグレード、トラブルシューティングに関する FAQ を掲載しています。</block>
@@ -3616,7 +3574,6 @@ QoS ポリシーグループはバックエンドまたはストレージプー�
   <block id="05f95d89af1ccd9b986014406a4b1fc8" category="paragraph">いいえユーザエクスペリエンスと機能に関する変更はありません。使用されるプロビジョニングツール名はです<block ref="08044207e9f63bb0fd474dab347a776c" prefix=" " category="inline-code"></block>。現在および将来のリリースで提供される新しい機能をすべて使用する場合は、 Astra Trident をインストールする方法を推奨します。</block>
   <block id="0a7e87df44869b8d60a83f35d1e2747b" category="section-title">Kubernetes クラスタに Astra Trident をインストールして使用</block>
   <block id="bde6cb03741f92107c63aeebe62d3278" category="section-title">Astra Trident はプライベートレジストリからのオフラインインストールをサポートしていますか。</block>
-  <block id="11e8ef6c378ba835810fad2cc65ce5b5" category="paragraph">はい、 Astra Trident はオフラインでインストールできます。を参照してください <block ref="8b57b68a0e3f8b19c1d735a44663ac45" category="inline-link-macro-rx"></block>。</block>
   <block id="1c51806b370d428d5779dbcacd940174" category="section-title">Astra Trident はリモートからインストールできますか。</block>
   <block id="bf858450c271da75a3df3a15ca761330" category="paragraph">はい。Astra Trident 18.10以降では、を搭載した任意のマシンからリモートインストール機能がサポートされます<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block> クラスタへのアクセス。実行後<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block> アクセスが検証されます（「開始」など）<block ref="1513e62b9eb7bbfc46c1be1a91a2ab76" prefix=" " category="inline-code"></block> リモートマシンからコマンドを実行して確認）、インストール手順に従います。</block>
   <block id="12694c2de4575e39a6f7e81d55e35de9" category="section-title">Astra Trident でハイアベイラビリティを構成できますか。</block>
@@ -3624,9 +3581,7 @@ QoS ポリシーグループはバックエンドまたはストレージプー�
   <block id="1656e4b34abdb6d497b40cac65366767" category="section-title">Astra Trident は kube-system ネームスペースにアクセスする必要がありますか。</block>
   <block id="6f67e1edfd4aa5b0e695528a9c7d8898" category="paragraph">Astra Trident は Kubernetes API Server からデータを読み取り、アプリケーションが新しい PVC を要求するタイミングを判断して、 kube-system へのアクセスを必要とします。</block>
   <block id="16cdb35003b5bcf0f30556e0bc477511" category="section-title">Astra Trident で使用されるロールと権限を教えてください。</block>
-  <block id="85d1bf3ede0fe784fd2bd122a9f9488f" category="paragraph">TridentインストーラによってKubernetes ClusterRoleが作成され、KubernetesクラスタのPersistentVolume、PersistentVolumeClaim、StorageClass、およびSecretリソースに特定のアクセス権が付与されます。を参照してください <block ref="52b05a1acf0f0f7fbbce1ec1469188fc" category="inline-link-macro-rx"></block>。</block>
   <block id="8ff39a39871cc30228035bc0580a6af4" category="section-title">Astra Trident がインストールに使用するマニフェストファイルをローカルで生成できますか。</block>
-  <block id="5b72286a318e05b9dba4ea3ab28f1892" category="paragraph">必要に応じて、マニフェストファイルである Astra Trident のインストールに使用するものをローカルで生成して変更できます。を参照してください <block ref="52b05a1acf0f0f7fbbce1ec1469188fc" category="inline-link-macro-rx"></block>。</block>
   <block id="e6af67b71bd46d7588b50f28e1414f9b" category="section-title">2 つの別々の Kubernetes クラスタに対して、同じ ONTAP バックエンド SVM を 2 つの別々の Astra Trident インスタンスに対して共有できますか。</block>
   <block id="7bbf9b47e035f0f9bb7c46098e78fb4d" category="paragraph">推奨されませんが、同じバックエンド SVM を 2 つの Astra Trident インスタンスに使用できます。インストール時に各インスタンスに一意のボリューム名を指定するか、一意のボリューム名を指定します<block ref="641b2675465e765661450709e2351a8e" prefix=" " category="inline-code"></block> のパラメータを指定します<block ref="57a3822fdb39e72cdc47d89fd04ce467" prefix=" " category="inline-code"></block> ファイル。これは、両方のインスタンスで同じ FlexVol を使用しないためです。</block>
   <block id="9840a5bb6278469ed550bcdcc92c29c5" category="section-title">ContainerLinux （旧 CoreOS ）に Astra Trident をインストールすることはできますか。</block>
@@ -4171,4 +4126,45 @@ QoS ポリシーグループはバックエンドまたはストレージプー�
   <block id="4d7f894e8ec350a861c28ea984648f59" category="paragraph"><block ref="22ab900b028c044945b4dba56093fe8f" category="inline-link-rx"></block>バックエンドを設定して使用するには、次のものが必要です：</block>
   <block id="9ea1dc44c501f59786a0dd2c5ebc2d21" category="list-text">Trident AutoSupportは、個人を特定できる情報（PII）または個人情報を収集または送信しません。付属の<block ref="ea14b34590cee15ec565ad8fd8feca2e" category="inline-link-rx"></block>は、Tridentコンテナイメージ自体には適用されません。NetAppのデータセキュリティと信頼への取り組みの詳細については、<block ref="ea3b01bc03342a227ac7c6848f1e44fa" category="inline-link-rx"></block>を参照してください。</block>
   <block id="99083389f5fd76e7d24c00b092abd2e0" category="list-text">Tridentを<block ref="5990d744db8a85d254742635736f0912" category="inline-link-rx"></block>と併用する際に発生する可能性のある一般的な問題は、テナントとクライアントのシークレットが、権限が不十分なアプリ登録から取得される場合です。Tridentの要件の完全なリストについては、<block ref="afedf4ee56554ea6e6b54e6aa206680c" category="inline-link-macro-rx"></block>の設定を参照してください。</block>
+  <block id="69e1f4d293dd6de32da089be22c8fa0f" category="paragraph">はい、Astra Trident はオフラインでインストールできます。<block ref="15fac14fde71e22d192958daf8c5d2bd" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="72a4624efd0ed3605ae9e657896048fb" category="paragraph">Tridentインストーラは、KubernetesのClusterRoleを作成します。これにより、KubernetesクラスタのPersistentVolume、PersistentVolumeClaim、StorageClass、およびSecretリソースへの特定のアクセス権が付与されます。<block ref="6ff613d97a84cceffda4306b2b42ca5f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="40dbf93d77e7fe443f3db97a3abd8a9c" category="paragraph">必要に応じて、Astra Trident がインストールに使用する正確なマニフェストファイルをローカルで生成および変更できます。<block ref="6ff613d97a84cceffda4306b2b42ca5f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8f10bc802e1e909a2d28bd7470afc9ca" category="list-text"><block ref="8f10bc802e1e909a2d28bd7470afc9ca" category="inline-link-macro-rx"></block></block>
+  <block id="bd36045805a85f9665960a0f6f9e955f" category="list-text"><block ref="bd36045805a85f9665960a0f6f9e955f" category="inline-link-macro-rx"></block></block>
+  <block id="1e011868ab20c9e559f0a57d12d019fb" category="paragraph">試用するには、すぐに使えるラボイメージを使用して「コンテナ化されたワークロード向け永続ストレージの容易なデプロイとクローン作成」へのアクセスをリクエストしてください。<block ref="1b82f3af90a0f7c7537a178da2b2ffa1" category="inline-link-macro-rx"></block>テストドライブでは、3ノードの Kubernetes クラスターを備えたサンドボックス環境が提供され、Astra Trident がインストールおよび設定された状態で利用できます。これは、Astra Trident に慣れ親しみ、その機能を詳しく調べるための優れた方法です。</block>
+  <block id="714ad635b7b855ea6b214ed7b344a93a" category="paragraph">Cloud Volumes ONTAPは、クラウド上でONTAPデータ管理ソフトウェアを実行するソフトウェア型のストレージ アプライアンスです。Cloud Volumes ONTAPは、本番ワークロード、ディザスタリカバリ、DevOps、ファイル共有、およびデータベース管理に使用できます。ストレージ効率、高可用性、データレプリケーション、データ階層化、アプリケーションの一貫性を提供することで、エンタープライズストレージをクラウドへと拡張します。</block>
+  <block id="09e5ae8723c2186bbb50d9e0a08eb64f" category="paragraph"><block ref="6cb366d36cc7d558f998a05025384719" category="inline-link-rx"></block>は、NFS と SMB を介してNASボリュームをオールフラッシュのパフォーマンスで提供するクラウドネイティブファイルサービスです。このサービスを利用することで、レガシーアプリケーションを含むあらゆるワークロードをGCPクラウド上で実行できます。このサービスは、一貫した高いパフォーマンス、即時クローン作成、データ保護、およびGoogle Compute Engine （GCE）インスタンスへの安全なアクセスを提供する、完全マネージドサービスです。</block>
+  <block id="7555b1122bf9410d0946209feb52070c" category="paragraph"><block ref="7555b1122bf9410d0946209feb52070c" category="inline-link-macro-rx"></block></block>
+  <block id="218a0c4bd3daf2a2ce3574281b7ca0b2" category="paragraph"><block ref="d5658c9dfbfb4ef585182e92445a8919" category="inline-link-macro-rx"></block>を確認して、インストールの前提条件を満たしていること、および環境に適したインストールオプションが選択されていることを確認します。</block>
+  <block id="db7fc8df66e930e05282807a6ebd58f4" category="paragraph"><block ref="1feb3274d112f2cef694d133af384cac" category="inline-link-macro-rx"></block>に加えて<block ref="fc0cdbd8defe0c7175199dd05a0f8e76" category="inline-link-macro-rx"></block>が必要です。</block>
+  <block id="2a2c6cbf201e7fa0935ec1e8b243cca1" category="cell">ポッドの追加ノードセレクター。詳細については、<block ref="4b8785cedf610e3d8df57f69213f93a8" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="8a00a4799d11edabcb628da338d295ce" category="cell">ポッドの Kubernetes 許容値をオーバーライドします。詳細については、<block ref="4b8785cedf610e3d8df57f69213f93a8" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="da4135ce2a4993f23b82709d1072d478" category="paragraph">Linux ホストにログインし、正常に動作している<block ref="f546aa86570a808d23361d7f4e2a08c3" category="inline-link-macro-rx"></block>を管理していること、および必要な権限があることを確認します。</block>
+  <block id="0d8f30017a3c82df9a5d969fa5e4586f" category="paragraph">インストールを始める前に、Linuxホストにログインし、正常に動作している<block ref="f546aa86570a808d23361d7f4e2a08c3" category="inline-link-macro-rx"></block>を管理していること、および必要な権限を持っていることを確認します。</block>
+  <block id="d88223d773f28ccdf21626fa17114e63" category="admonition">インストーラが正常に完了しない場合、または<block ref="ce3abad3e11d6a43c5178e20a0c7d64b" prefix=" " category="inline-code"></block> <block ref="2903817a25b5de1e17a06122d71c5cf9" prefix="(" category="inline-code"></block>（23.01より前のバージョン）が*Running*ステータスでない場合、プラットフォームはインストールされていません。<block ref="9b017020b9d48d433ec90c548e6b5c70" prefix=" " category="inline-code"></block>を使用して<block ref="0c26927b9a8e07f011a7bc7653213d74" category="inline-link-macro-rx"></block>問題のトラブルシューティングを行います。</block>
+  <block id="b6d8b463f43b9bd6d3c74d5dce2cd55b" category="paragraph">強制分離の詳細については、<block ref="6c7800cce21a64dbbd3f0ddcad0c6998" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="799c345f132bca7bd3f7831646af862a" category="list-text">サポートされているバージョンの Kubernetes を実行し、機能要件が有効になっている、サポートされている Kubernetes クラスターに対する完全な権限。詳細については、<block ref="6fc1811f5f9a8ae54793544600e2dff7" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="a0c3ccd8e55dd8a4f5f5ad3a5269e331" category="admonition"><block ref="13aad4b6f98e790ff55e578921fa5ede" category="inline-link-macro-rx"></block>にまだ慣れていない場合は、今こそそれを実行する絶好の機会です。</block>
+  <block id="52c58f553a5ef6874859d0bf137653fc" category="paragraph">適切なインストール方法を選択してください。決定を下す前に<block ref="8566ad2be80f530306673ceb0a701406" category="inline-link-macro-rx"></block>の考慮事項も確認する必要があります。</block>
+  <block id="16d20e2bb7824a446f0340afb2850635" category="paragraph">手動でデプロイする場合でも、Helm を使用する場合でも、Trident オペレーターはインストールを簡素化し、Astra Trident リソースを動的に管理する優れた方法です。<block ref="a1f2adae0e8434fa57fbe3e21b52345e" category="inline-link-macro-rx"></block> を使用して、<block ref="ae61bf6af1a7406b62c72a4bef1ab62d" prefix=" " category="inline-code"></block> カスタムリソース（CR）の属性を設定することもできます。</block>
+  <block id="87fd461a97f2cfc4a9c84ee8d83b2f3c" category="paragraph">NetApp Console で Astra Trident を使用すると、最新バージョンの Astra Trident にアップグレードし、ストレージクラスを追加および管理して作業環境に接続し、Cloud Backup Service を使用して永続ボリュームをバックアップできます。NetAppBlueXP は、Trident オペレーターを使用した Astra Trident のデプロイメントをサポートしており、手動または Helm を使用して実行できます。</block>
+  <block id="d5913c62c46eb5dfa6fbdf48be92191f" category="list-text">アップグレード後に発生したバグ、依存関係の問題、またはアップグレードの失敗や不完全な場合の修正が必要な場合は、Astra Tridentをアンインストールして、そのバージョン専用の手順に従って以前のバージョンを再インストールしてください。これは、以前のバージョンに_ダウングレード_するための唯一推奨される方法です。</block>
+  <block id="fc2e66218fd84f948c8422e9281248bb" category="paragraph">数あるうちの1つ<block ref="2b6c752c2a0adaf915d24df45e6dabc3" category="inline-link-macro-rx"></block>は、既存のマウント済みボリュームに影響を与えることなく、Astra Trident および Kubernetes オブジェクトを自動的に処理して Astra Trident をインストールおよびアップグレードできることです。このようにして、Astra Trident はダウンタイムなしでアップグレードをサポートできます。または<block ref="c0fb6b6f12bb8ae805a97690328ec023" category="inline-link-macro-rx"></block>。特に、Trident オペレーターは Kubernetes クラスターと通信して以下を実行します：</block>
+  <block id="39b249736124fb00d653108623277947" category="admonition">Kubernetes クラスター上の Astra Trident アーキテクチャの詳細については、<block ref="d9cc95c35405d0ba55bb1c80379b860b" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="db7a344a2f782e818bfa08cc874be2d3" category="paragraph">Trident オペレーターを使用して、手動または Helm を使用して Astra Trident をアップグレードできます。Trident オペレーターのインストールから別の Trident オペレーターのインストールにアップグレードすることも、<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block> のインストールから Trident オペレーターのバージョンにアップグレードすることもできます。Trident オペレーターのインストールをアップグレードする前に、<block ref="ad3ae3ba576f54a9ed86202bbeedc293" category="inline-link-macro-rx"></block> を確認してください。</block>
+  <block id="7ef3dcd61d5200c05eea26a0af9bbdfa" category="admonition">名前空間スコープ演算子（バージョン 20.07 ～ 20.10）を使用してインストールされた Astra Trident からアップグレードするには、インストールされているバージョンの Trident のアップグレード手順を使用してください。</block>
+  <block id="0194b429ee895b1ffd660458b1dd9e86" category="list-text"><block ref="0d686e3d2fd8a83c53781f8faf92011d" category="inline-link-macro-rx"></block>の場合は、<block ref="00f73970d66f7ceaea7519a201d88dc8" prefix=" " category="inline-code"></block>を使用してワンステップでアップグレードできます。Helmリポジトリを追加していない場合、またはアップグレードに使用できない場合：</block>
+  <block id="ff04a2fb2e8f8c64855f72ca655c3711" category="admonition">インストール方法を切り替える前に、<block ref="d9897dfd3f891279098b72584e2caa99" category="inline-link-macro-rx"></block>を確認してください</block>
+  <block id="8fec8c5961acee22b528da59b1a909a9" category="paragraph">一般的には、最初のインストールに使用したのと同じ方法でアップグレードする必要がありますが、<block ref="be81b6c3db35f66680ab7fc08ff1a8b2" category="inline-link-macro-rx"></block>。Astra Trident をアップグレードするには2つのオプションがあります。</block>
+  <block id="7ba0dd834b932c7125765a293d38c4f6" category="paragraph"><block ref="ad3ae3ba576f54a9ed86202bbeedc293" category="inline-link-macro-rx"></block>を使用してアップグレードする前に<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>を確認してください。</block>
+  <block id="c0c002f3c4090ac088ac226f92967ad1" category="list-text">Astra Trident を再インストールします。<block ref="5d650e9fd5f63ad11130ab2e947f0cea" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="501f4219ca266b3c343a6da265c07a51" category="paragraph"><block ref="75e4a0ceb294a9d74374c938e4e8ddc8" prefix=" " category="inline-code"></block>ディレクトリには、Tridentで使用するPVC定義の例が含まれています。Tridentボリュームに関連するパラメータと設定の詳細については、<block ref="9bc4d375ea27414a71de44546925f90c" category="inline-xref-macro-rx"></block>を参照してください。</block>
+  <block id="ac9a428f58fc452a9db1b0751be42065" category="paragraph"><block ref="828eac22cdd627b36fb36a534a284377" category="inline-link-macro-rx"></block>はAstra Trident REST APIを操作する最も簡単な方法ですが、必要に応じてRESTエンドポイントを直接使用することもできます。</block>
+  <block id="e3f173c8eede192f942c02dde616f9b4" category="paragraph">Astra Trident は、次の2つの<block ref="0e0bedd2b5fbccecb2a3b95925d60b6d" category="inline-link-macro-rx"></block>のいずれかにCloud Volumes Service ボリュームを作成できます：</block>
+  <block id="cf8dac454aa871b40751cb77bc25fffd" category="list-text">*CVS-Performance*: デフォルトの Astra Trident サービスタイプです。このパフォーマンス最適化されたサービスタイプは、パフォーマンスを重視する本番環境のワークロードに最適です。CVS-Performance サービスタイプは、最小サイズ 100 GiB のボリュームをサポートするハードウェアオプションです。次のいずれかを選択できます<block ref="50eb937c50385f64de3990e26821a720" category="inline-link-macro-rx"></block>：</block>
+  <block id="7523a04d12ccedb3b0da95c71ce61748" category="list-text">*CVS*: CVSサービスタイプは、高いゾーン可用性を提供しますが、パフォーマンスレベルは限定的から中程度です。CVSサービスタイプは、ストレージプールを使用して1 GiBという小さなボリュームをサポートするソフトウェアオプションです。ストレージプールには最大50個のボリュームを含めることができ、すべてのボリュームはプールの容量とパフォーマンスを共有します。次のいずれかを選択できます<block ref="317a7f4ddfc9168f53b85126e7b70d3e" category="inline-link-macro-rx"></block>：</block>
+  <block id="4210f9797b57dbdc6e053e48413768b6" category="paragraph"><block ref="cc4cbeecb6e71ce65d6e5af5fbde3163" category="inline-link-rx"></block>バックエンドを設定して使用するには、以下のものが必要です：</block>
+  <block id="9502f88fbe245a8b7aaf0d7523fd74d1" category="cell">LUKS暗号化を有効にします。<block ref="569f9f91cdcc19909b8acbf6f423daf7" category="inline-link-macro-rx"></block>を参照してください。SANのみ。</block>
+  <block id="5460ecbb6371c1df42df4a9c16a07c32" category="list-text">以下のいずれかの方法を使用して Astra Trident をデプロイします<block ref="9f5304e884de68405d3f7d425674cf34" category="inline-link-macro-rx"></block>。</block>
+  <block id="3505f295d6a44375d99670b663949ca1" category="paragraph"><block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>ユーティリティを使用して、<block ref="b5eda0a74558a342cf659187f06f746f" prefix=" " category="inline-code"></block>コマンドを実行すると、従属ボリュームを取得できます。詳細については、link:../trident-managing-k8s/tridentctl.html<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix="[" category="inline-code"></block>コマンドとオプション]を参照してください。</block>
 </blocks>

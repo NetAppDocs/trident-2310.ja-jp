@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy-tridentctl.html 
+permalink: trident-install/kubernetes-deploy-tridentctl.html 
 keywords: deploy, astra trident, methods, tridentctl, windows 
 summary: 'を使用して、Astra Tridentをインストールできます `tridentctl`。このプロセスでは、Astra Tridentで必要なコンテナイメージがプライベートレジストリに格納されているかどうかに関係なく、環境 のインストールを実行します。' 
 ---
@@ -16,6 +16,7 @@ summary: 'を使用して、Astra Tridentをインストールできます `trid
 
 
 
+[[critical-information-about-astra-trident-23-10]]
 == Astra Tridentに関する重要な情報23.10
 
 * Astra Tridentに関する次の重要な情報をお読みください。*
@@ -33,12 +34,13 @@ summary: 'を使用して、Astra Tridentをインストールできます `trid
 ====
 
 
+[[install-astra-trident-using-tridentctl]]
 == を使用してAstra Tridentをインストールします `tridentctl`
 
-レビュー link:../trident-get-started/kubernetes-deploy.html["インストールの概要"] インストールの前提条件を満たし、環境に適したインストールオプションを選択していることを確認します。
+link:kubernetes-deploy.html["インストールの概要"]を確認して、インストールの前提条件を満たしていること、および環境に適したインストールオプションが選択されていることを確認します。
 
 .作業を開始する前に
-インストールを開始する前に、Linuxホストにログインして、管理が機能していることを確認します。 link:requirements.html["サポートされる Kubernetes クラスタ"^] 必要な権限があることを確認します。
+インストールを始める前に、Linuxホストにログインし、正常に動作しているlink:../trident-get-started/requirements.html["サポートされる Kubernetes クラスタ"^]を管理していること、および必要な権限を持っていることを確認します。
 
 
 NOTE: OpenShiftでは、を使用します `oc` ではなく `kubectl` 以降のすべての例では、を実行して、最初に* system:admin *としてログインします `oc login -u system:admin` または `oc login -u kube-admin`。
@@ -69,6 +71,7 @@ kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
 ====
 
 
+[[step-1-download-the-trident-installer-package]]
 == 手順1：Tridentのインストーラパッケージをダウンロード
 
 Astra Tridentインストーラパッケージは、Tridentポッドを作成し、そのステートを維持するために使用されるCRDオブジェクトを設定し、CSIサイドカーを初期化して、プロビジョニングやクラスタホストへのボリュームの接続などのアクションを実行します。から最新バージョンのTridentインストーラをダウンロードして展開します link:https://github.com/NetApp/trident/releases/latest["GitHubの_Assets_sectionを参照してください"^]。例では、選択した<trident-installer-XX.XX.X.tar.gz> Tridentバージョンを使用してupdate_Tridentを更新します。
@@ -81,6 +84,7 @@ cd trident-installer
 ----
 
 
+[[step-2-install-astra-trident]]
 == 手順2：Astra Tridentをインストールする
 
 を実行して、必要なネームスペースにAstra Tridentをインストールします `tridentctl install` コマンドを実行します追加の引数を追加して、イメージのレジストリの場所を指定できます。
@@ -134,12 +138,14 @@ INFO Trident installation succeeded.
 ----
 
 
+[[verify-the-installation]]
 == インストールを確認します。
 
 ポッドの作成ステータスまたはを使用して、インストールを確認できます `tridentctl`。
 
 
 
+[[using-pod-creation-status]]
 === ポッドの作成ステータスを使用する
 
 作成したポッドのステータスを確認することで、Astra Tridentのインストールが完了したかどうかを確認できます。
@@ -153,10 +159,11 @@ trident-controller-679648bd45-cv2mx   6/6     Running   0          5m29s
 trident-node-linux-vgc8n              2/2     Running   0          5m29s
 ----
 
-NOTE: インストーラが正常に完了しない場合、または `trident-controller-<generated id>` (`trident-csi-<generated id>` 23.01より前のバージョンでは、* RUNNING *ステータスがありません。プラットフォームはインストールされませんでした。使用 `-d` 終了：  link:../troubleshooting.html#troubleshooting-an-unsuccessful-trident-deployment-using-tridentctl["デバッグモードをオンにします"] および問題 のトラブルシューティングを行います。
+NOTE: インストーラが正常に完了しない場合、または `trident-controller-<generated id>` (`trident-csi-<generated id>`（23.01より前のバージョン）が*Running*ステータスでない場合、プラットフォームはインストールされていません。 `-d`を使用してlink:../troubleshooting.html#unsuccessful-trident-deployment-using-tridentctl["デバッグモードをオンにします"]問題のトラブルシューティングを行います。
 
 
 
+[[using-tridentctl]]
 === を使用します `tridentctl`
 
 を使用できます `tridentctl` インストールされているAstra Tridentのバージョンを確認します。
@@ -173,6 +180,7 @@ NOTE: インストーラが正常に完了しない場合、または `trident-c
 ----
 
 
+[[sample-configurations]]
 == 構成例
 
 以下に、Astra Tridentをインストールするための設定例を示します。 `tridentctl`。
@@ -190,7 +198,7 @@ tridentctl install --windows -n trident
 .強制的に切り離し
 [%collapsible]
 ====
-強制切り離しの詳細については、を参照してください link:..trident-get-started/kubernetes-customize-deploy.html["Tridentオペレータのインストールをカスタマイズ"]。
+強制分離の詳細については、link:kubernetes-customize-deploy.html["Tridentオペレータのインストールをカスタマイズ"]を参照してください。
 
 [listing]
 ----

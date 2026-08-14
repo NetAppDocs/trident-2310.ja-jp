@@ -16,6 +16,7 @@ summary: 'バックエンドは、 Astra Trident とストレージシステム�
 
 
 
+[[tridentbackendconfig]]
 == `TridentBackendConfig`
 
 `TridentBackendConfig` (`tbc`、 `tbconfig`、 `tbackendconfig`）は、Astra Tridentをバックエンドで管理できるフロントエンドで、名前を付けたCRDです `kubectl`。Kubernetesやストレージ管理者は、専用のコマンドラインユーティリティを使用せずに、Kubernetes CLIを使用してバックエンドを直接作成、管理できるようになりました (`tridentctl`）。
@@ -72,6 +73,7 @@ TIP: で作成されたバックエンド `tridentctl` が関連付けられて�
 
 
 
+[[steps-overview]]
 == 手順の概要
 
 を使用して新しいバックエンドを作成します `kubectl`では、次の操作を実行する必要があります。
@@ -84,6 +86,7 @@ TIP: で作成されたバックエンド `tridentctl` が関連付けられて�
 
 
 
+[[step-1-create-a-kubernetes-secret]]
 == 手順 1 ： Kubernetes Secret を作成します
 
 バックエンドのアクセスクレデンシャルを含むシークレットを作成します。ストレージサービス / プラットフォームごとに異なる固有の機能です。次に例を示します。
@@ -187,6 +190,7 @@ CHAP ターゲットイニシエータシークレット。useCHAP = true の場
 
 
 
+[[step-2-create-the-tridentbackendconfig-cr]]
 == 手順2：を作成します `TridentBackendConfig` CR
 
 これで、を作成する準備ができました `TridentBackendConfig` CR。この例では、を使用するバックエンド `ontap-san` ドライバは、を使用して作成されます `TridentBackendConfig` 以下のオブジェクト：
@@ -213,6 +217,7 @@ spec:
 ----
 
 
+[[step-3-verify-the-status-of-the-tridentbackendconfig-cr]]
 == 手順3：のステータスを確認します `TridentBackendConfig` CR
 
 を作成しました `TridentBackendConfig` CRでは、ステータスを確認できます。次の例を参照してください。
@@ -243,6 +248,7 @@ backend-tbc-ontap-san   ontap-san-backend     8d24fce7-6f60-4d4a-8ef6-bab2699e6a
 
 
 
+[[optional-step-4-get-more-details]]
 == （オプション）手順 4 ：詳細を確認します
 
 バックエンドに関する詳細情報を確認するには、次のコマンドを実行します。

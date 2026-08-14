@@ -16,6 +16,7 @@ summary: Cloud Volumes Service for Google CloudをAstra Tridentのバックエ�
 
 
 
+[[google-cloud-driver-details]]
 == Google Cloudドライバの詳細
 
 Astra Tridentの特長 `gcp-cvs` クラスタと通信するドライバ。サポートされているアクセスモードは、_ReadWriteOnce_(RWO)、_ReadOnlyMany_(ROX)、_ReadWriteMany_(RWX)、_ReadWriteOncePod_(RWOP)です。
@@ -37,18 +38,19 @@ RWO、ROX、RWX、RWOP
 |===
 
 
+[[learn-about-astra-trident-support-for-cloud-volumes-service-for-google-cloud]]
 == Cloud Volumes Service for Google Cloudに対するAstra Tridentサポートの詳細をご確認ください
 
-TridentがCloud Volumes Service ボリュームを作成できるのは、2つのうちの1つです link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-types["サービスタイプ"^]：
+Astra Trident は、次の2つのlink:https://docs.cloud.google.com/netapp/volumes/docs/discover/overview["サービスタイプ"^]のいずれかにCloud Volumes Service ボリュームを作成できます：
 
-* * CVS - Performance *：デフォルトのAstra Tridentサービスタイプ。パフォーマンスが最適化されたこのサービスタイプは、パフォーマンスを重視する本番環境のワークロードに最適です。CVS -パフォーマンスサービスタイプは、サイズが100GiB以上のボリュームをサポートするハードウェアオプションです。のいずれかを選択できます link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-levels#service_levels_for_the_cvs-performance_service_type["3つのサービスレベル"^]：
+* *CVS-Performance*: デフォルトの Astra Trident サービスタイプです。このパフォーマンス最適化されたサービスタイプは、パフォーマンスを重視する本番環境のワークロードに最適です。CVS-Performance サービスタイプは、最小サイズ 100 GiB のボリュームをサポートするハードウェアオプションです。次のいずれかを選択できますlink:https://docs.cloud.google.com/netapp/volumes/docs/discover/overview["3つのサービスレベル"^]：
 +
 ** `standard`
 ** `premium`
 ** `extreme`
 
 
-* * CVS *：CVSサービスタイプは、中程度のパフォーマンスレベルに制限された高レベルの可用性を提供します。CVSサービスタイプは、ストレージプールを使用して1GiB未満のボリュームをサポートするソフトウェアオプションです。ストレージプールには最大50個のボリュームを含めることができ、すべてのボリュームでプールの容量とパフォーマンスを共有できます。のいずれかを選択できます link:https://cloud.google.com/architecture/partners/netapp-cloud-volumes/service-levels#service_levels_for_the_cvs_service_type["2つのサービスレベル"^]：
+* *CVS*: CVSサービスタイプは、高いゾーン可用性を提供しますが、パフォーマンスレベルは限定的から中程度です。CVSサービスタイプは、ストレージプールを使用して1 GiBという小さなボリュームをサポートするソフトウェアオプションです。ストレージプールには最大50個のボリュームを含めることができ、すべてのボリュームはプールの容量とパフォーマンスを共有します。次のいずれかを選択できますlink:https://docs.cloud.google.com/netapp/volumes/docs/discover/overview["2つのサービスレベル"^]：
 +
 ** `standardsw`
 ** `zoneredundantstandardsw`
@@ -57,7 +59,7 @@ TridentがCloud Volumes Service ボリュームを作成できるのは、2つ�
 
 
 .必要なもの
-を設定して使用します https://cloud.netapp.com/cloud-volumes-service-for-gcp?utm_source=NetAppTrident_ReadTheDocs&utm_campaign=Trident["Cloud Volumes Service for Google Cloud"^] バックエンドには次のものが必要です。
+ https://www.netapp.com/google-cloud/netapp-volumes/["Cloud Volumes Service for Google Cloud"^]バックエンドを設定して使用するには、以下のものが必要です：
 
 * NetApp Cloud Volumes Service で設定されたGoogle Cloudアカウント
 * Google Cloud アカウントのプロジェクト番号
@@ -67,6 +69,7 @@ TridentがCloud Volumes Service ボリュームを作成できるのは、2つ�
 
 
 
+[[backend-configuration-options]]
 == バックエンド構成オプション
 
 各バックエンドは、 1 つの Google Cloud リージョンにボリュームをプロビジョニングします。他のリージョンにボリュームを作成する場合は、バックエンドを追加で定義します。
@@ -149,6 +152,7 @@ CVSのデフォルトは"standardsw"です。
 |===
 
 
+[[volume-provisioning-options]]
 == ボリュームのプロビジョニングオプション
 
 では、デフォルトのボリュームプロビジョニングを制御できます `defaults` 構成ファイルのセクション。
@@ -177,6 +181,7 @@ CVSサービスのタイプではデフォルトが設定されませんが、1G
 |===
 
 
+[[cvs-performance-service-type-examples]]
 == CVS -パフォーマンスサービスの種類の例
 
 次の例は、CVS -パフォーマンスサービスタイプの設定例を示しています。
@@ -390,6 +395,7 @@ storage:
 ====
 
 
+[[storage-class-definitions]]
 === ストレージクラスの定義
 
 次のStorageClass定義は、仮想プールの構成例に適用されます。を使用します `parameters.selector`では、ボリュームのホストに使用する仮想プールをストレージクラスごとに指定できます。ボリュームには、選択したプールで定義された要素があります。
@@ -460,6 +466,7 @@ allowVolumeExpansion: true
 
 
 
+[[cvs-service-type-examples]]
 == CVSサービスタイプの例
 
 次の例は、CVSサービスタイプの設定例を示しています。
@@ -582,6 +589,7 @@ serviceLevel: Standardsw
 ====
 
 
+[[whats-next]]
 == 次の手順
 
 バックエンド構成ファイルを作成したら、次のコマンドを実行します。

@@ -15,7 +15,7 @@ summary: Astra Tridentのアンインストールには、Astra Tridentのイン
 Astra Tridentのアンインストールには、Astra Tridentのインストールと同じ方法を使用する必要があります。
 
 .このタスクについて
-* アップグレード、依存関係の問題、アップグレードの失敗や不完全な完了後に観察されたバグの修正が必要な場合は、Astra Tridentをアンインストールし、該当する手順を使用して以前のバージョンを再インストールする必要があります。 link:../earlier-versions.html["バージョン"]。これは、以前のバージョンに_downgrade_toを実行するための唯一の推奨方法です。
+* アップグレード後に発生したバグ、依存関係の問題、またはアップグレードの失敗や不完全な場合の修正が必要な場合は、Astra Tridentをアンインストールして、そのバージョン専用の手順に従って以前のバージョンを再インストールしてください。これは、以前のバージョンに_ダウングレード_するための唯一推奨される方法です。
 * アップグレードと再インストールを簡単に行うため、Astra Tridentをアンインストールしても、Astra Tridentで作成されたCRDや関連オブジェクトは削除されません。Astra Tridentとそのすべてのデータを完全に削除する必要がある場合は、を参照してください。 link:../troubleshooting.html#completely-remove-astra-trident-and-crds["Astra TridentとCRDを完全に削除"]。
 
 
@@ -24,6 +24,7 @@ Kubernetesクラスタの運用を停止する場合は、Astra Tridentで作成
 
 
 
+[[determine-the-original-installation-method]]
 == 元のインストール方法を決定する
 
 Astra Tridentは、インストール時と同じ方法でアンインストールする必要があります。アンインストールする前に、Astra Tridentの最初のインストールに使用したバージョンを確認します。
@@ -44,12 +45,14 @@ Astra Tridentは、インストール時と同じ方法でアンインストー�
 
 
 
+[[uninstall-a-trident-operator-installation]]
 == Tridentオペレータのインストールをアンインストールする
 
 Tridentオペレータのインストールは手動でアンインストールすることも、Helmを使用してアンインストールすることもできます。
 
 
 
+[[uninstall-manual-installation]]
 === 手動インストールのアンインストール
 
 オペレータを使用してAstra Tridentをインストールした場合は、次のいずれかの方法でアンインストールできます。
@@ -73,6 +76,7 @@ kubectl delete -f deploy/<bundle.yaml> -n <namespace>
 
 
 
+[[uninstall-helm-installation]]
 === Helmインストールのアンインストール
 
 Helmを使用してAstra Tridentをインストールした場合は、を使用してアンインストールできます `helm uninstall`。
@@ -90,6 +94,7 @@ release "trident" uninstalled
 ----
 
 
+[[uninstall-a-tridentctl-installation]]
 == のアンインストール `tridentctl` インストール
 
 を使用します `uninstall` のコマンド `tridentctl` CRDと関連オブジェクトを除くAstra Tridentに関連付けられているすべてのリソースを削除するには、次の手順を実行します。

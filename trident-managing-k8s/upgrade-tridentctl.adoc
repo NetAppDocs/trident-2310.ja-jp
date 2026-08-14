@@ -18,7 +18,7 @@ summary: 'を使用すると、既存のAstra Tridentインストールを簡単
 Astra Trident のアンインストールと再インストールはアップグレードとして機能します。Trident をアンインストールしても、 Astra Trident 環境で使用されている Persistent Volume Claim （ PVC ；永続的ボリューム要求）と Persistent Volume （ PV ；永続的ボリューム）は削除されません。Astra Trident がオフラインの間は、すでにプロビジョニング済みの PVS を引き続き使用でき、 Astra Trident は、オンラインに戻った時点で作成された PVC に対してボリュームをプロビジョニングします。
 
 .作業を開始する前に
-レビュー link:upgrade-trident.html#select-an-upgrade-method["アップグレード方法を選択します"] を使用してアップグレードする前に `tridentctl`。
+link:upgrade-trident.html#step-3-select-an-upgrade-method["アップグレード方法を選択します"]を使用してアップグレードする前に `tridentctl`を確認してください。
 
 .手順
 . のアンインストールコマンドを実行します `tridentctl` CRDと関連オブジェクトを除くAstra Tridentに関連付けられているすべてのリソースを削除する。
@@ -27,7 +27,7 @@ Astra Trident のアンインストールと再インストールはアップグ
 ----
 ./tridentctl uninstall -n <namespace>
 ----
-. Astra Tridentを再インストールします。を参照してください link:..trident-get-started/kubernetes-deploy-tridentctl.html["tridentctl を使用して Astra Trident をインストールします"]。
+. Astra Trident を再インストールします。link:../trident-install/kubernetes-deploy-tridentctl.html["tridentctl を使用して Astra Trident をインストールします"]を参照してください。
 
 
 

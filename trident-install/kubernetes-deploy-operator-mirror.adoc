@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy-operator-mirror.html 
+permalink: trident-install/kubernetes-deploy-operator-mirror.html 
 keywords: deploy, astra trident, methods, operator, tridentctl, mirrored, registry, registries 
 summary: Tridentオペレータが手動で導入してAstra Tridentをインストールできます。このプロセスでは、環境 をインストールする際に、Astra Tridentで必要なコンテナイメージがプライベートレジストリに格納されます。 
 ---
@@ -16,6 +16,7 @@ Tridentオペレータが手動で導入してAstra Tridentをインストール
 
 
 
+[[critical-information-about-astra-trident-23-10]]
 == Astra Tridentに関する重要な情報23.10
 
 * Astra Tridentに関する次の重要な情報をお読みください。*
@@ -33,12 +34,13 @@ Tridentオペレータが手動で導入してAstra Tridentをインストール
 ====
 
 
+[[manually-deploy-the-trident-operator-and-install-trident]]
 == Tridentオペレータを手動で導入し、Tridentをインストール
 
-レビュー link:../trident-get-started/kubernetes-deploy.html["インストールの概要"] インストールの前提条件を満たし、環境に適したインストールオプションを選択していることを確認します。
+link:kubernetes-deploy.html["インストールの概要"]を確認して、インストールの前提条件を満たしていること、および環境に適したインストールオプションが選択されていることを確認します。
 
 .作業を開始する前に
-Linuxホストにログインして、管理が機能していることとを確認します link:requirements.html["サポートされる Kubernetes クラスタ"^] 必要な権限があることを確認します。
+Linux ホストにログインし、正常に動作しているlink:../trident-get-started/requirements.html["サポートされる Kubernetes クラスタ"^]を管理していること、および必要な権限があることを確認します。
 
 
 NOTE: OpenShiftでは、を使用します `oc` ではなく `kubectl` 以降のすべての例では、を実行して、最初に* system:admin *としてログインします `oc login -u system:admin` または `oc login -u kube-admin`。
@@ -69,6 +71,7 @@ kubectl run -i --tty ping --image=busybox --restart=Never --rm -- \
 ====
 
 
+[[step-1-download-the-trident-installer-package]]
 === 手順1：Tridentのインストーラパッケージをダウンロード
 
 Astra Tridentインストーラパッケージには、Tridentオペレータの導入とAstra Tridentのインストールに必要なものがすべて含まれています。から最新バージョンのTridentインストーラをダウンロードして展開します link:https://github.com/NetApp/trident/releases/latest["GitHubの_Assets_sectionを参照してください"^]。
@@ -81,6 +84,7 @@ cd trident-installer
 ----
 
 
+[[step-2-create-the-tridentorchestrator-crd]]
 === 手順2：を作成します `TridentOrchestrator` CRD
 
 を作成します `TridentOrchestrator` カスタムリソース定義（CRD）。を作成します `TridentOrchestrator` カスタムリソース。で適切なCRD YAMLバージョンを使用します `deploy/crds` を作成します `TridentOrchestrator` CRD：
@@ -91,6 +95,7 @@ kubectl create -f deploy/crds/<VERSION>.yaml
 ----
 
 
+[[step-3-update-the-registry-location-in-the-operator]]
 === 手順3：オペレータのレジストリの場所を更新します
 
 インチ `/deploy/operator.yaml`、を更新します `image: docker.io/netapp/trident-operator:23.10.0` イメージレジストリの場所を反映します。。 link:../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions["TridentとCSIの画像"] 1つのレジストリまたは別のレジストリに配置できますが、すべてのCSIイメージは同じレジストリに配置する必要があります。例：
@@ -101,6 +106,7 @@ kubectl create -f deploy/crds/<VERSION>.yaml
 
 
 
+[[step-4-deploy-the-trident-operator]]
 === ステップ4：Tridentオペレータを導入
 
 Astra Tridentインストーラには、オペレータのインストールや関連オブジェクトの作成に使用できるバンドルファイルが用意されています。このバンドルファイルを使用すると、オペレータを簡単に導入し、デフォルトの設定でAstra Tridentをインストールできます。
@@ -154,6 +160,7 @@ IMPORTANT: Kubernetes クラスタには、オペレータのインスタンス�
 
 
 
+[[step-5-update-the-image-registry-location-in-the-tridentorchestrator]]
 === 手順5:でイメージレジストリの場所を更新します `TridentOrchestrator`
 
 。 link:../trident-get-started/requirements.html#container-images-and-corresponding-kubernetes-versions["TridentとCSIの画像"] 1つのレジストリまたは別のレジストリに配置できますが、すべてのCSIイメージは同じレジストリに配置する必要があります。更新 `deploy/crds/tridentorchestrator_cr.yaml` レジストリ設定に基づいて追加の場所の仕様を追加します。
@@ -183,6 +190,7 @@ tridentImage: "<your-registry>/netapp/trident:23.10.0"
 ====
 
 
+[[step-6-create-the-tridentorchestrator-and-install-trident]]
 === 手順6： `TridentOrchestrator` Tridentをインストール
 
 これで、を作成できます `TridentOrchestrator` Astra Tridentを導入必要に応じて、さらに行うことができます link:kubernetes-customize-deploy.html["Tridentのインストールをカスタマイズ"] で属性を使用する `TridentOrchestrator` 仕様次の例は、TridentイメージとCSIイメージが異なるレジストリにあるインストールを示しています。
@@ -235,12 +243,14 @@ Events:
 ----
 
 
+[[verify-the-installation]]
 == インストールを確認します。
 
 インストールを確認するには、いくつかの方法があります。
 
 
 
+[[using-tridentorchestrator-status]]
 === を使用します `TridentOrchestrator` ステータス
 
 のステータス `TridentOrchestrator` インストールが正常に完了したかどうかを示し、インストールされているTridentのバージョンが表示されます。インストール中、のステータス `TridentOrchestrator` からの変更 `Installing` 終了： `Installed`。を確認した場合は `Failed` ステータスとオペレータは単独で回復できません。 link:../troubleshooting.html["ログをチェックしてください"]。
@@ -275,6 +285,7 @@ Astra Trident。オペレータはこの状態からのリカバリを自動的�
 |===
 
 
+[[using-pod-creation-status]]
 === ポッドの作成ステータスを使用する
 
 作成したポッドのステータスを確認することで、Astra Tridentのインストールが完了したかどうかを確認できます。
@@ -292,6 +303,7 @@ trident-operator-766f7b8658-ldzsv          1/1     Running   0           3m
 ----
 
 
+[[using-tridentctl]]
 === を使用します `tridentctl`
 
 を使用できます `tridentctl` インストールされているAstra Tridentのバージョンを確認します。

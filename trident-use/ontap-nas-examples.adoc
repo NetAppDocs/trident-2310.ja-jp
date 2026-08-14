@@ -16,6 +16,7 @@ Astra Tridentのインストール環境でONTAP NASドライバを作成して�
 
 
 
+[[backend-configuration-options]]
 == バックエンド構成オプション
 
 バックエンド設定オプションについては、次の表を参照してください。
@@ -138,6 +139,7 @@ Kubernetes永続ボリュームのマウントオプションは通常はスト�
 |===
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == ボリュームのプロビジョニング用のバックエンド構成オプション
 
 これらのオプションを使用して、のデフォルトプロビジョニングを制御できます `defaults` 設定のセクション。例については、以下の設定例を参照してください。
@@ -202,6 +204,7 @@ NOTE: Trident が Astra で QoS ポリシーグループを使用するには、
 
 
 
+[[volume-provisioning-examples]]
 === ボリュームプロビジョニングの例
 
 デフォルトが定義されている例を次に示します。
@@ -250,6 +253,7 @@ image::../media/volume-show-nas.png[に、 volume show コマンドの出力を�
 
 
 
+[[minimal-configuration-examples]]
 == 最小限の設定例
 
 次の例は、ほとんどのパラメータをデフォルトのままにする基本的な設定を示しています。これは、バックエンドを定義する最も簡単な方法です。
@@ -412,6 +416,7 @@ storagePrefix: myPrefix_
 ====
 
 
+[[examples-of-backends-with-virtual-pools]]
 == 仮想プールを使用するバックエンドの例
 
 以下に示すサンプルのバックエンド定義ファイルでは、次のような特定のデフォルトがすべてのストレージプールに設定されています。 `spaceReserve` 「なし」の場合は、 `spaceAllocation` との誤り `encryption` 実行されます。仮想プールは、ストレージセクションで定義します。
@@ -594,6 +599,7 @@ storage:
 ====
 
 
+[[map-backends-to-storageclasses]]
 == バックエンドを StorageClasses にマッピングします
 
 次のStorageClass定義は、を参照してください。 <<仮想プールを使用するバックエンドの例>>。を使用する `parameters.selector` フィールドでは、各StorageClassがボリュームのホストに使用できる仮想プールを呼び出します。ボリュームには、選択した仮想プール内で定義された要素があります。
@@ -669,6 +675,7 @@ Tridentが、どの仮想プールを選択するかを判断し、ストレー�
 
 
 
+[[update-datalif-after-initial-configuration]]
 == 更新 `dataLIF` 初期設定後
 
 初期設定後にデータLIFを変更するには、次のコマンドを実行して、更新されたデータLIFを新しいバックエンドJSONファイルに指定します。

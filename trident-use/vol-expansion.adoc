@@ -16,6 +16,7 @@ Astra Trident により、 Kubernetes ユーザは作成後にボリュームを
 
 
 
+[[expand-an-iscsi-volume]]
 == iSCSI ボリュームを展開します
 
 CSI プロビジョニングを使用して、 iSCSI Persistent Volume （ PV ）を拡張できます。
@@ -25,6 +26,7 @@ NOTE: iSCSIボリューム拡張は、でサポートされます `ontap-san`、
 
 
 
+[[step-1-configure-the-storageclass-to-support-volume-expansion]]
 === 手順 1 ：ボリュームの拡張をサポートするようにストレージクラスを設定する
 
 StorageClass定義を編集して `allowVolumeExpansion` フィールドからに移動します `true`。
@@ -46,6 +48,7 @@ allowVolumeExpansion: True
 
 
 
+[[step-2-create-a-pvc-with-the-storageclass-you-created]]
 === 手順 2 ：作成した StorageClass を使用して PVC を作成します
 
 PVC定義を編集し、 `spec.resources.requests.storage` 新たに必要となったサイズを反映するには、元のサイズよりも大きくする必要があります。
@@ -79,6 +82,7 @@ pvc-8a814d62-bd58-4253-b0d1-82f2885db671   1Gi        RWO            Delete     
 ----
 
 
+[[step-3-define-a-pod-that-attaches-the-pvc]]
 === 手順 3 ： PVC を接続するポッドを定義します
 
 サイズを変更するポッドにPVを接続します。iSCSI PV のサイズ変更には、次の 2 つのシナリオがあります。
@@ -113,6 +117,7 @@ Mounted By:    ubuntu-pod
 ----
 
 
+[[step-4-expand-the-pv]]
 === ステップ 4 ： PV を展開します
 
 1Giから2Giに作成されたPVのサイズを変更するには、PVCの定義を編集してを更新します `spec.resources.requests.storage` 2Giへ。
@@ -149,6 +154,7 @@ spec:
 ----
 
 
+[[step-5-validate-the-expansion]]
 === 手順 5 ：拡張を検証する
 
 PVC 、 PV 、 Astra Trident のボリュームのサイズを確認することで、拡張が正しく機能しているかどうかを検証できます。
@@ -170,12 +176,14 @@ tridentctl get volumes -n trident
 ----
 
 
+[[expand-an-nfs-volume]]
 == NFS ボリュームを拡張します
 
 Astra Tridentは、でプロビジョニングしたNFS PVSのボリューム拡張をサポートしています `ontap-nas`、 `ontap-nas-economy`、 `ontap-nas-flexgroup`、 `gcp-cvs`および `azure-netapp-files` バックエンド
 
 
 
+[[step-1-configure-the-storageclass-to-support-volume-expansion]]
 === 手順 1 ：ボリュームの拡張をサポートするようにストレージクラスを設定する
 
 NFS PVのサイズを変更するには、管理者はまず、を設定してボリュームを拡張できるようにストレージクラスを構成する必要があります `allowVolumeExpansion` フィールドからに移動します `true`：
@@ -196,6 +204,7 @@ allowVolumeExpansion: true
 
 
 
+[[step-2-create-a-pvc-with-the-storageclass-you-created]]
 === 手順 2 ：作成した StorageClass を使用して PVC を作成します
 
 [listing]
@@ -227,6 +236,7 @@ pvc-08f3d561-b199-11e9-8d9f-5254004dfdb7   20Mi       RWO            Delete     
 ----
 
 
+[[step-3-expand-the-pv]]
 === ステップ3：PVを拡張する
 
 新しく作成した20MiBのPVのサイズを1GiBに変更するには、そのPVCを編集してを設定します `spec.resources.requests.storage` 1GiBへ：
@@ -263,6 +273,7 @@ spec:
 ----
 
 
+[[step-4-validate-the-expansion]]
 === 手順4：拡張を検証する
 
 PVC 、 PV 、 Astra Trident のボリュームのサイズを確認することで、サイズ変更が正しく機能しているかどうかを検証できます。

@@ -16,6 +16,7 @@ summary: ここに記載された推奨事項に従って、 Astra Trident の�
 
 
 
+[[run-astra-trident-in-its-own-namespace]]
 == Astra Trident を独自のネームスペースで実行
 
 アプリケーション、アプリケーション管理者、ユーザ、および管理アプリケーションが Astra Trident オブジェクト定義またはポッドにアクセスしないようにして、信頼性の高いストレージを確保し、悪意のあるアクティビティをブロックすることが重要です。
@@ -25,6 +26,7 @@ Astra Tridentのネームスペースにアクセスできるのは管理者だ�
 
 
 
+[[use-chap-authentication-with-ontap-san-backends]]
 == ONTAP SAN バックエンドで CHAP 認証を使用します
 
 Astra Tridentは、ONTAP SANワークロードに対して（を使用して）CHAPベースの認証をサポート `ontap-san` および `ontap-san-economy` ドライバ）。ネットアップでは、ホストとストレージバックエンドの間の認証に、双方向 CHAP と Astra Trident を使用することを推奨しています。
@@ -34,6 +36,7 @@ SANストレージドライバを使用するONTAP バックエンドの場合�
 
 
 
+[[use-chap-authentication-with-netapp-hci-and-solidfire-backends]]
 == NetApp HCI および SolidFire バックエンドで CHAP 認証を使用します
 
 ホストと NetApp HCI バックエンドと SolidFire バックエンドの間の認証を確保するために、双方向の CHAP を導入することを推奨します。Astra Trident は、テナントごとに 2 つの CHAP パスワードを含むシークレットオブジェクトを使用します。Astra Tridentをインストールすると、CHAPシークレットが管理されて `tridentvolume` 対応するPVのCRオブジェクト。PVを作成すると、Astra TridentはCHAPシークレットを使用してiSCSIセッションを開始し、CHAPを介してNetApp HCIおよびSolidFireシステムと通信します。
@@ -43,6 +46,7 @@ NOTE: Astra Tridentで作成されるボリュームは、どのボリューム�
 
 
 
+[[use-astra-trident-with-nve-and-nae]]
 == NVEおよびNAEでAstra Tridentを使用する
 
 NetApp ONTAP は、保管データの暗号化を提供し、ディスクが盗難、返却、転用された場合に機密データを保護します。詳細については、を参照してください link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryption の設定の概要"^]。

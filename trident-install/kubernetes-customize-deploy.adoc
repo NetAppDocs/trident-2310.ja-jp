@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-customize-deploy.html 
+permalink: trident-install/kubernetes-customize-deploy.html 
 keywords: deploy, trident, methods, operator, tridentctl, helm, attributes, customize, tridentorchestrator, smb, windows 
 summary: 'Tridentオペレータは、の属性を使用して、Astra Tridentのインストール方法をカスタマイズできます `TridentOrchestrator` 仕様' 
 ---
@@ -16,6 +16,7 @@ Tridentオペレータは、の属性を使用してAstra Tridentのインスト
 
 
 
+[[understanding-controller-pods-and-node-pods]]
 == コントローラポッドとノードポッドについて
 
 Astra Tridentは、単一のコントローラポッドと、クラスタ内の各ワーカーノード上のノードポッドとして実行されます。Astra Tridentボリュームをマウントするすべてのホストでノードポッドが実行されている必要があります。
@@ -28,6 +29,7 @@ Kubernetes link:https://kubernetes.io/docs/concepts/scheduling-eviction/assign-p
 
 
 
+[[configuration-options]]
 == 設定オプション
 
 
@@ -125,6 +127,7 @@ NOTE: ポッドパラメータの書式設定の詳細については、を参�
 
 
 
+[[details-about-force-detach]]
 === フォースデタッチの詳細
 
 では、[強制切り離し]を使用できます `ontap-san` および `ontap-san-economy` のみ。強制接続解除を有効にする前に、Kubernetesクラスタで非グレースフルノードシャットダウン（NGN）を有効にする必要があります。詳細については、を参照してください link:https://kubernetes.io/docs/concepts/architecture/nodes/#non-graceful-node-shutdown["Kubernetes：正常なノードシャットダウンではありません"^]。
@@ -150,6 +153,7 @@ NOTE: Tridentコントローラは、（とマークされたあとに）ノー�
 
 
 
+[[sample-configurations]]
 == 構成例
 
 次の属性を使用できます： <<設定オプション>> テイギスルバアイ `TridentOrchestrator` をクリックして、インストールをカスタマイズします。

@@ -16,6 +16,7 @@ Astra Tridentのインストール環境でONTAP SANドライバを作成して�
 
 
 
+[[backend-configuration-options]]
 == バックエンド構成オプション
 
 バックエンド設定オプションについては、次の表を参照してください。
@@ -129,6 +130,7 @@ NetApp ONTAP バックエンドにAmazon FSXを使用している場合は、指
 |===
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == ボリュームのプロビジョニング用のバックエンド構成オプション
 
 これらのオプションを使用して、のデフォルトプロビジョニングを制御できます `defaults` 設定のセクション。例については、以下の設定例を参照してください。
@@ -180,6 +182,7 @@ LUKS暗号化はNVMe/TCPではサポートされません。 | ""
 |===
 
 
+[[volume-provisioning-examples]]
 === ボリュームプロビジョニングの例
 
 デフォルトが定義されている例を次に示します。
@@ -225,6 +228,7 @@ image::../media/vol-show-san.png[に、 volume show コマンドの出力を示�
 
 
 
+[[minimal-configuration-examples]]
 == 最小限の設定例
 
 次の例は、ほとんどのパラメータをデフォルトのままにする基本的な設定を示しています。これは、バックエンドを定義する最も簡単な方法です。
@@ -367,6 +371,7 @@ useREST: true
 ====
 
 
+[[examples-of-backends-with-virtual-pools]]
 == 仮想プールを使用するバックエンドの例
 
 これらのサンプルバックエンド定義ファイルでは、次のような特定のデフォルトがすべてのストレージプールに設定されています。 `spaceReserve` 「なし」の場合は、 `spaceAllocation` との誤り `encryption` 実行されます。仮想プールは、ストレージセクションで定義します。
@@ -508,6 +513,7 @@ storage:
 ====
 
 
+[[map-backends-to-storageclasses]]
 == バックエンドを StorageClasses にマッピングします
 
 次のStorageClass定義は、 <<仮想プールを使用するバックエンドの例>>。を使用する `parameters.selector` フィールドでは、各StorageClassがボリュームのホストに使用できる仮想プールを呼び出します。ボリュームには、選択した仮想プール内で定義された要素があります。

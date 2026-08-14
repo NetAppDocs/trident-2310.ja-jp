@@ -16,6 +16,7 @@ Azure NetApp FilesはAstra Tridentのバックエンドとして設定できま�
 
 
 
+[[azure-netapp-files-driver-details]]
 == Azure NetApp Filesドライバの詳細
 
 Astra Tridentは、次のAzure NetApp Filesストレージドライバを使用してクラスタと通信します。サポートされているアクセスモードは、_ReadWriteOnce_(RWO)、_ReadOnlyMany_(ROX)、_ReadWriteMany_(RWX)、_ReadWriteOncePod_(RWOP)です。
@@ -38,6 +39,7 @@ RWO、ROX、RWX、RWOP
 |===
 
 
+[[considerations]]
 === 考慮事項
 
 * Azure NetApp Files サービスでは、100GB未満のボリュームはサポートされません。容量の小さいボリュームが要求されると、Astra Tridentによって自動的に100GiBのボリュームが作成されます。
@@ -46,6 +48,7 @@ RWO、ROX、RWX、RWOP
 
 
 
+[[managed-identities-for-aks]]
 == AKSの管理対象ID
 
 Astra Tridentのサポート link:https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["管理対象ID"^] （Azure Kubernetes Servicesクラスタの場合）。管理されたアイデンティティによって提供される合理的なクレデンシャル管理を利用するには、次のものが必要です。

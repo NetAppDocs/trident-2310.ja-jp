@@ -16,6 +16,7 @@ Trident がドライバ用のボリュームスナップショットの作成を
 
 
 
+[[learn-about-volume-snapshot-creation]]
 == ボリュームSnapshotの作成方法について説明します
 
 * をクリックします `ontap-nas`、 `ontap-san`、 `gcp-cvs`および `azure-netapp-files` ドライバ、各永続ボリューム（PV）はFlexVol にマッピングされます。その結果、ボリューム Snapshot はネットアップ Snapshot として作成されます。NetAppのスナップショット・テクノロジーは'競合するスナップショット・テクノロジーよりも安定性'拡張性'リカバリ性'パフォーマンスを提供しますSnapshot コピーは、作成時とストレージスペースの両方で非常に効率的です。

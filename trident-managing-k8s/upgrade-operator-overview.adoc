@@ -16,9 +16,10 @@ Tridentオペレータを使用してAstra Tridentをアップグレードする
 
 
 
+[[trident-operator-upgrade-handling]]
 == Tridentオペレータのアップグレード処理
 
-多数のうちの1つ link:../trident-get-started/kubernetes-deploy.html["Tridentオペレータを使用するメリット"] Astra Tridentのインストールとアップグレードは、既存のマウントボリュームを停止することなく、Astra TridentとKubernetesのオブジェクトを自動的に処理します。これにより、Astra Tridentはダウンタイムなしでアップグレードをサポートできます。 link:https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/["ローリング更新"^]。TridentオペレータはKubernetesクラスタと通信して次のことを行います。
+数あるうちの1つlink:../trident-install/kubernetes-deploy.html["Tridentオペレータを使用するメリット"]は、既存のマウント済みボリュームに影響を与えることなく、Astra Trident および Kubernetes オブジェクトを自動的に処理して Astra Trident をインストールおよびアップグレードできることです。このようにして、Astra Trident はダウンタイムなしでアップグレードをサポートできます。またはlink:https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/["ローリング更新"^]。特に、Trident オペレーターは Kubernetes クラスターと通信して以下を実行します：
 
 * Trident Controller環境とノードデーモンセットを削除して再作成します。
 * TridentコントローラポッドとTridentノードポッドを新しいバージョンに置き換えます。
@@ -30,10 +31,11 @@ Tridentオペレータを使用してAstra Tridentをアップグレードする
 
 
 
-TIP: KubernetesクラスタのAstra Tridentアーキテクチャの詳細については、 link:trident-concepts/intro.html#astra-trident-architecture["Astra Tridentのアーキテクチャ"]。
+TIP: Kubernetes クラスター上の Astra Trident アーキテクチャの詳細については、link:../trident-get-started/architecture.html["Astra Tridentのアーキテクチャ"]を参照してください。
 
 
 
+[[operator-upgrade-workflow]]
 == オペレータのアップグレードワークフロー
 
 Tridentオペレータを使用してアップグレードを開始すると、次の処理が実行されます。

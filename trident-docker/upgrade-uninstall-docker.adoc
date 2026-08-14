@@ -16,6 +16,7 @@ summary: '使用中のボリュームに影響を与えることなく、 Astra 
 
 
 
+[[upgrade]]
 == アップグレード
 
 Astra Trident for Docker をアップグレードするには、次の手順を実行します。
@@ -77,6 +78,7 @@ IMPORTANT: 古いバージョンの Astra Trident （ 20.10 より前）から A
 
 
 
+[[uninstall]]
 == をアンインストールします
 
 Astra Trident for Docker をアンインストールするには、次の手順を実行します。

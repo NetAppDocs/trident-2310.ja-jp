@@ -16,6 +16,7 @@ Tridentを使用すると、プライマリネームスペースにボリュー�
 
 
 
+[[features]]
 == の機能
 
 Astra TridentVolumeReference CRを使用すると、1つ以上のKubernetesネームスペース間でReadWriteMany（RWX）NFSボリュームをセキュアに共有できます。このKubernetesネイティブ解決策 には、次のようなメリットがあります。
@@ -31,6 +32,7 @@ image::cross-namespace-sharing.png[ネームスペース間共有の概念図。
 
 
 
+[[quick-start]]
 == クイックスタート
 
 NFSボリューム共有はいくつかの手順で設定できます。
@@ -53,6 +55,7 @@ NFSボリューム共有はいくつかの手順で設定できます。
 
 
 
+[[configure-the-source-and-destination-namespaces]]
 == ソースネームスペースとデスティネーションネームスペースを設定します
 
 セキュリティを確保するために、ネームスペース間共有では、ソースネームスペースの所有者、クラスタ管理者、および宛先ネームスペースの所有者によるコラボレーションとアクションが必要です。ユーザロールは各手順で指定します。
@@ -133,15 +136,17 @@ Astra Tridentがを読み取り `shareFromPVC` デスティネーションPVCに
 
 
 
+[[delete-a-shared-volume]]
 == 共有ボリュームを削除
 
 複数のネームスペースで共有されているボリュームは削除できます。Tridentが、ソースネームスペースのボリュームへのアクセスを削除し、ボリュームを共有する他のネームスペースへのアクセスを維持します。ボリュームを参照するすべてのネームスペースが削除されると、Astra Tridentによってボリュームが削除されます。
 
 
 
+[[use-tridentctl-get-to-query-subordinate-volumes]]
 == 使用 `tridentctl get` 下位のボリュームを照会する
 
-を使用する[`tridentctl` ユーティリティを使用すると、を実行できます `get` コマンドを使用して下位のボリュームを取得します。詳細については、リンク:./trident-reference/tridentctl.htmlを参照してください[`tridentctl` コマンドとオプション]。
+[`tridentctl`ユーティリティを使用して、 `get`コマンドを実行すると、従属ボリュームを取得できます。詳細については、link:../trident-managing-k8s/tridentctl.html[`tridentctl`コマンドとオプション]を参照してください。
 
 [listing]
 ----
@@ -157,6 +162,7 @@ Usage:
 
 
 
+[[limitations]]
 == 制限
 
 * Astra Tridentでは、デスティネーションネームスペースが共有ボリュームに書き込まれるのを防ぐことはできません。共有ボリュームのデータの上書きを防止するには、ファイルロックなどのプロセスを使用する必要があります。
@@ -166,10 +172,10 @@ Usage:
 
 
 
+[[for-more-information]]
 == を参照してください。
 
 ネームスペース間のボリュームアクセスの詳細については、次の資料を参照してください。
 
-* にアクセスします link:https://cloud.netapp.com/blog/astra-blg-sharing-volumes-between-namespaces-say-hello-to-cross-namespace-volume-access["ネームスペース間でのボリュームの共有：ネームスペース間のボリュームアクセスを許可する場合は「Hello」と入力します"^]。
 * のデモをご覧ください link:https://media.netapp.com/page/9071d19d-1438-5ed3-a7aa-ea4d73c28b7f/solutions-products["ネットアップTV"^]。
 

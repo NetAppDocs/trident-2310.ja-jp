@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy.html 
+permalink: trident-install/kubernetes-deploy.html 
 keywords: deploy, astra trident, methods, operator, tridentctl, helm, tanzu, vmware 
 summary: 'Tridentは、Tridentオペレータ（手動またはHelmを使用）またはでインストールできます `tridentctl`。このトピックでは、適切なインストールプロセスを選択するための重要な情報を提供します。' 
 ---
@@ -16,6 +16,7 @@ summary: 'Tridentは、Tridentオペレータ（手動またはHelmを使用）�
 
 
 
+[[critical-information-about-astra-trident-23-10]]
 == Astra Tridentに関する重要な情報23.10
 
 * Astra Tridentに関する次の重要な情報をお読みください。*
@@ -33,11 +34,12 @@ summary: 'Tridentは、Tridentオペレータ（手動またはHelmを使用）�
 ====
 
 
+[[before-you-begin]]
 == 作業を開始する前に
 
 インストールパスに関係なく、次のものが必要です。
 
-* サポートされているバージョンのKubernetesと機能の要件を有効にして実行されている、サポートされるKubernetesクラスタに対するすべての権限。を確認します link:requirements.html["要件"] を参照してください。
+* サポートされているバージョンの Kubernetes を実行し、機能要件が有効になっている、サポートされている Kubernetes クラスターに対する完全な権限。詳細については、link:../trident-get-started/requirements.html["要件"]を参照してください。
 * サポートされているネットアップストレージシステムへのアクセス。
 * Kubernetesワーカーノードすべてからボリュームをマウントできます。
 * を搭載したLinuxホスト `kubectl` （または `oc`OpenShiftを使用している場合）Kubernetesクラスタを管理するようにインストールおよび設定します。
@@ -46,19 +48,21 @@ summary: 'Tridentは、Tridentオペレータ（手動またはHelmを使用）�
 
 
 
-TIP: に慣れていない場合は link:../trident-concepts/intro.html["基本概念"^]今こそ、そのための絶好の機会です。
+TIP: link:../trident-get-started/intro.html["基本概念"^]にまだ慣れていない場合は、今こそそれを実行する絶好の機会です。
 
 
 
+[[choose-your-installation-method]]
 == インストール方法を選択します
 
-適切なインストール方法を選択します。また、に関する考慮事項についても確認しておく必要があります link:kubernetes-deploy.html#move-between-installation-methods["メソッド間を移動しています"] 決定する前に。
+適切なインストール方法を選択してください。決定を下す前にlink:kubernetes-deploy.html#moving-between-installation-methods["メソッド間を移動しています"]の考慮事項も確認する必要があります。
 
 
 
+[[using-the-trident-operator]]
 === Trident演算子を使用する
 
-Tridentのオペレータは、手動で導入する場合でも、Helmを使用する場合でも、Astra Tridentのリソースを動的に管理して簡単にインストールできます。それは可能である link:../trident-get-started/kubernetes-customize-deploy.html["Tridentのオペレータ環境をカスタマイズ"] で属性を使用する `TridentOrchestrator` カスタムリソース（CR）。
+手動でデプロイする場合でも、Helm を使用する場合でも、Trident オペレーターはインストールを簡素化し、Astra Trident リソースを動的に管理する優れた方法です。link:kubernetes-customize-deploy.html["Tridentのオペレータ環境をカスタマイズ"] を使用して、 `TridentOrchestrator` カスタムリソース（CR）の属性を設定することもできます。
 
 Tridentオペレータには次のようなメリットがあります。
 
@@ -118,11 +122,12 @@ NOTE: クラスタがサポート対象外のバージョンにアップグレ�
 .BlueXP（旧Cloud Manager）</strong> を使用した<strong> Kubernetesクラスタ管理
 [%collapsible]
 ====
-を使用 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/concept-kubernetes.html["Astra TridentでBlueXPを使用"^]では、最新バージョンのAstra Tridentにアップグレードし、ストレージクラスを追加して管理し、作業環境に接続し、Cloud Backup Service を使用して永続的ボリュームをバックアップすることができます。BlueXPは、Tridentオペレータを使用したAstra Tridentの導入を、手動またはHelmを使用してサポートしています。
+NetApp Console で Astra Trident を使用すると、最新バージョンの Astra Trident にアップグレードし、ストレージクラスを追加および管理して作業環境に接続し、Cloud Backup Service を使用して永続ボリュームをバックアップできます。NetAppBlueXP は、Trident オペレーターを使用した Astra Trident のデプロイメントをサポートしており、手動または Helm を使用して実行できます。
 
 ====
 
 
+[[using-tridentctl]]
 === を使用します `tridentctl`
 
 既存の環境をアップグレードする必要がある場合や、高度にカスタマイズすることを検討している場合は、アップグレードを検討する必要があります 。これは、従来の方法であった Astra Trident を導入する方法です。
@@ -135,6 +140,7 @@ NOTE: 22.04 リリース以降、 Astra Trident がインストールされる�
 
 
 
+[[choose-your-installation-mode]]
 == インストールモードを選択します
 
 組織で必要な_インストールモード_（標準、オフライン、またはリモート）に基づいて導入プロセスを決定します。
@@ -174,6 +180,7 @@ NOTE: CSIイメージは、レジストリ設定に関係なく、1つのレジ�
 ====
 
 
+[[select-the-process-based-on-your-method-and-mode]]
 == メソッドとモードに基づいてプロセスを選択します
 
 決定が終わったら、適切なプロセスを選択します。
@@ -203,6 +210,7 @@ link:kubernetes-deploy-tridentctl.html["標準インストールまたはオフ�
 |===
 
 
+[[moving-between-installation-methods]]
 == インストール方法を切り替える
 
 インストール方法を変更することもできます。その前に、次の点を考慮してください。
@@ -214,6 +222,7 @@ link:kubernetes-deploy-tridentctl.html["標準インストールまたはオフ�
 
 
 
+[[other-known-configuration-options]]
 == その他の既知の設定オプション
 
 VMware Tanzu Portfolio 製品に Astra Trident をインストールする場合：

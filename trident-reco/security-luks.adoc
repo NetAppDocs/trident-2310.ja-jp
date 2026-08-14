@@ -31,6 +31,7 @@ grep "aes" /proc/cpuinfo
 
 
 
+[[enable-luks-encryption]]
 == LUKS暗号化を有効にします
 
 ONTAP SANおよびONTAP SANエコノミーボリュームでは、Linux Unified Key Setup（LUKS；Linux統合キーセットアップ）を使用して、ボリューム単位のホスト側暗号化を有効にできます。
@@ -88,12 +89,14 @@ stringData:
 
 
 
+[[limitations]]
 === 制限
 
 LUKSで暗号化されたボリュームは、ONTAP の重複排除と圧縮を利用できません。
 
 
 
+[[backend-configuration-for-importing-luks-volumes]]
 == LUKSボリュームをインポートするためのバックエンド構成
 
 LUKSボリュームをインポートするには、を設定する必要があります `luksEncryption` 終了：(`true` バックエンドにあります。。 `luksEncryption` optionを指定すると、ボリュームがLUKS準拠かどうかがAstra Tridentに通知されます (`true`）またはLUKS準拠ではありません (`false`）をクリックします。
@@ -115,6 +118,7 @@ defaults:
 ----
 
 
+[[rotate-a-luks-passphrase]]
 == LUKSパスフレーズをローテーションします
 
 LUKSのパスフレーズをローテーションしてローテーションを確認できます。
@@ -209,6 +213,7 @@ NOTE: たとえば、2つのパスフレーズが返された場合などです 
 
 
 
+[[enable-volume-expansion]]
 == ボリュームの拡張を有効にします
 
 LUKS暗号化ボリューム上でボリューム拡張を有効にできます。

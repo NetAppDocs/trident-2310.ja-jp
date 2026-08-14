@@ -12,16 +12,17 @@ summary: 既存の Astra Trident インストールは、オペレータが簡�
 
 
 [role="lead"]
-Astra Tridentは、Tridentオペレータを使用して手動またはHelmを使用してアップグレードできます。Tridentオペレータのインストール環境から別のTridentオペレータのインストール環境へのアップグレード、または `tridentctl` Tridentオペレータバージョンへのインストールレビュー link:upgrade-trident.html#select-an-upgrade-method["アップグレード方法を選択します"] Tridentオペレータのインストールをアップグレードする前に
+Trident オペレーターを使用して、手動または Helm を使用して Astra Trident をアップグレードできます。Trident オペレーターのインストールから別の Trident オペレーターのインストールにアップグレードすることも、 `tridentctl` のインストールから Trident オペレーターのバージョンにアップグレードすることもできます。Trident オペレーターのインストールをアップグレードする前に、link:upgrade-trident.html#step-3-select-an-upgrade-method["アップグレード方法を選択します"] を確認してください。
 
 
 
+[[upgrade-a-manual-installation]]
 == 手動インストールのアップグレード
 
 クラスタを対象としたTridentオペレータインストールから、クラスタを対象とした別のTridentオペレータインストールにアップグレードできます。すべてのAstra Tridentバージョン21.01以降では、クラスタを対象とした演算子を使用します。
 
 
-NOTE: ネームスペースを対象としたオペレータ（バージョン20.07~20.10）を使用してインストールされたAstra Tridentからアップグレードするには、次のアップグレード手順を使用してください： link:../earlier-versions.html["インストールされているバージョン"] 実績があります。
+NOTE: 名前空間スコープ演算子（バージョン 20.07 ～ 20.10）を使用してインストールされた Astra Trident からアップグレードするには、インストールされているバージョンの Trident のアップグレード手順を使用してください。
 
 .このタスクについて
 Tridentにはバンドルファイルが用意されています。このファイルを使用して、オペレータをインストールしたり、Kubernetesバージョンに対応する関連オブジェクトを作成したりできます。
@@ -58,6 +59,7 @@ kubectl create -f 23.10.0/trident-installer/deploy/<bundle.yaml> -n trident
 
 
 
+[[upgrade-a-helm-installation]]
 == Helmインストールのアップグレード
 
 Astra Trident Helmのインストールをアップグレードできます。
@@ -66,7 +68,7 @@ Astra Trident Helmのインストールをアップグレードできます。
 WARNING: Astra TridentがインストールされているKubernetesクラスタを1.24から1.25以降にアップグレードする場合は、value.yamlを更新して設定する必要があります `excludePodSecurityPolicy` 終了： `true` または、を追加します `--set excludePodSecurityPolicy=true` に移動します `helm upgrade` コマンドを実行してからクラスタをアップグレードしてください。
 
 .手順
-. あなたの場合 link:../trident-get-started/kubernetes-deploy-helm.html#deploy-the-trident-operator-and-install-astra-trident-using-helm["Helmを使用したAstra Tridentのインストール"]を使用できます。 `helm upgrade trident netapp-trident/trident-operator --version 23.10.0` 1つの手順でアップグレードできます。Helmリポジトリを追加しなかった場合、またはHelmリポジトリを使用してアップグレードできない場合は、次の手順を実行します。
+. link:../trident-install/kubernetes-deploy-helm.html#deploy-the-trident-operator-and-install-astra-trident-using-helm["Helmを使用したAstra Tridentのインストール"]の場合は、 `helm upgrade trident netapp-trident/trident-operator --version 23.10.0`を使用してワンステップでアップグレードできます。Helmリポジトリを追加していない場合、またはアップグレードに使用できない場合：
 +
 .. 次のサイトからAstra Tridentの最新リリースをダウンロードしてください： link:https://github.com/NetApp/trident/releases/latest["GitHubの_Assets_sectionを参照してください"^]。
 .. を使用します `helm upgrade` コマンドを入力します `trident-operator-23.10.0.tgz` アップグレード後のバージョンが反映されます。
@@ -86,12 +88,13 @@ NOTE: 初期インストール時にカスタムオプションを設定した�
 
 
 
+[[upgrade-from-a-tridentctl-installation-to-trident-operator]]
 == からのアップグレード `tridentctl` Tridentオペレータへのインストール
 
 からTridentの最新リリースにアップグレードできます `tridentctl` インストール：既存のバックエンドとPVCは自動的に使用可能になります。
 
 
-NOTE: インストール方法を切り替える前に、 link:../trident-get-started/kubernetes-deploy.html#moving-between-installation-methods["インストール方法を切り替える"]
+NOTE: インストール方法を切り替える前に、link:../trident-install/kubernetes-deploy.html#moving-between-installation-methods["インストール方法を切り替える"]を確認してください
 
 .手順
 . 最新の Astra Trident リリースをダウンロード

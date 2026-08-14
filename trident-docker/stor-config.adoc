@@ -16,6 +16,7 @@ Astra Trident 構成で使用できる設定オプションを確認してくだ
 
 
 
+[[global-configuration-options]]
 == グローバル構成オプション
 
 以下の設定オプションは、使用するストレージプラットフォームに関係なく、すべての Astra Trident 構成に適用されます。
@@ -71,6 +72,7 @@ TIP: 使用しないでください `storagePrefix` （デフォルトを含む�
 |===
 
 
+[[ontap-configuration]]
 == ONTAP構成
 
 ONTAP を使用する場合は、上記のグローバル構成値に加えて、次のトップレベルオプションを使用できます。
@@ -262,6 +264,7 @@ NFSのサポート `mixed` および `unix` セキュリティ形式デフォル
 |===
 
 
+[[scaling-options]]
 === スケーリングオプション
 
 。 `ontap-nas` および `ontap-san` ドライバによって、DockerボリュームごとにONTAP FlexVol が作成されます。ONTAP では、クラスタノードあたり最大 1 、 000 個の FlexVol がサポートされます。クラスタの最大 FlexVol 数は 12 、 000 です。この制限内にDockerボリュームの要件が収まる場合は、を参照してください `ontap-nas` FlexVolで提供されるDockerボリューム単位のSnapshotやクローニングなどの機能が追加されているため、NAS解決策 がドライバとして推奨されます。
@@ -290,6 +293,7 @@ FlexGroups および FlexGroups に適したワークロードの詳細につい
 
 
 
+[[example-ontap-configuration-files]]
 === ONTAP 構成ファイルの例
 
 .<code>ontap-nas</code> ドライバのNFSの例
@@ -408,6 +412,7 @@ FlexGroups および FlexGroups に適したワークロードの詳細につい
 ====
 
 
+[[element-software-configuration]]
 == Element ソフトウェアの設定
 
 Element ソフトウェア（ NetApp HCI / SolidFire ）を使用する場合は、グローバルな設定値のほかに、以下のオプションも使用できます。
@@ -462,6 +467,7 @@ QoS の仕様
 
 
 
+[[example-element-software-configuration-file]]
 === Element ソフトウェア構成ファイルの例
 
 [listing]

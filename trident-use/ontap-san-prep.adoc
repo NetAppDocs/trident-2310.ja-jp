@@ -16,6 +16,7 @@ ONTAP SANドライバでONTAPバックエンドを構成するための要件と
 
 
 
+[[requirements]]
 == 要件
 
 ONTAP バックエンドすべてに対して、 Astra Trident が SVM に少なくとも 1 つのアグリゲートを割り当てておく必要があります。
@@ -26,6 +27,7 @@ ONTAP バックエンドすべてに対して、 Astra Trident が SVM に少な
 
 
 
+[[authenticate-the-ontap-backend]]
 == ONTAPバックエンドの認証
 
 Astra Trident には、 ONTAP バックエンドを認証する 2 つのモードがあります。
@@ -41,6 +43,7 @@ WARNING: クレデンシャルと証明書の両方を*指定しようとする�
 
 
 
+[[enable-credential-based-authentication]]
 === クレデンシャルベースの認証を有効にします
 
 Trident が ONTAP バックエンドと通信するには、 SVM を対象とした管理者またはクラスタを対象とした管理者のクレデンシャルが必要です。などの標準の事前定義されたロールを使用することを推奨します `admin` または `vsadmin`。これにより、今後のリリースの ONTAP との互換性が今後のリリースの Astra Trident で使用される機能 API が公開される可能性があります。カスタムのセキュリティログインロールは Astra Trident で作成して使用できますが、推奨されません。
@@ -84,6 +87,7 @@ password: password
 
 
 
+[[enable-certificate-based-authentication]]
 === 証明書ベースの認証を有効にします
 
 新規または既存のバックエンドは証明書を使用して ONTAP バックエンドと通信できます。バックエンド定義には 3 つのパラメータが必要です。
@@ -168,6 +172,7 @@ tridentctl create backend -f cert-backend.json -n trident
 
 
 
+[[update-authentication-methods-or-rotate-credentials]]
 === 認証方法を更新するか、クレデンシャルをローテーションして
 
 既存のバックエンドを更新して、別の認証方法を使用したり、クレデンシャルをローテーションしたりできます。これはどちらの方法でも機能します。ユーザ名とパスワードを使用するバックエンドは証明書を使用するように更新できますが、証明書を使用するバックエンドはユーザ名とパスワードに基づいて更新できます。これを行うには、既存の認証方法を削除して、新しい認証方法を追加する必要があります。次に、更新されたbackend.jsonファイルに必要なパラメータが含まれたものを使用して実行します `tridentctl backend update`。
@@ -201,6 +206,7 @@ NOTE: パスワードのローテーションを実行する際には、スト�
 
 
 
+[[authenticate-connections-with-bidirectional-chap]]
 == 双方向 CHAP を使用して接続を認証します
 
 Astra Tridentは、に対して双方向CHAPを使用してiSCSIセッションを認証できます `ontap-san` および `ontap-san-economy` ドライバ。これには、を有効にする必要があり `useCHAP` バックエンド定義のオプション。に設定すると `true`Astra Tridentでは、SVMのデフォルトのイニシエータセキュリティが双方向CHAPに設定され、バックエンドファイルにユーザ名とシークレットが設定されます。接続の認証には双方向 CHAP を使用することを推奨します。次の設定例を参照してください。
@@ -228,6 +234,7 @@ WARNING: 。 `useCHAP` パラメータは、1回だけ設定できるブール�
 
 
 
+[[how-it-works]]
 === 動作の仕組み
 
 を設定します `useCHAP` trueに設定すると、ストレージ管理者は、ストレージバックエンドでCHAPを設定するようにAstra Tridentに指示します。これには次のものが含まれます。
@@ -245,6 +252,7 @@ WARNING: 。 `useCHAP` パラメータは、1回だけ設定できるブール�
 
 
 
+[[rotate-credentials-and-update-backends]]
 === クレデンシャルをローテーションし、バックエンドを更新
 
 CHAPクレデンシャルを更新するには、でCHAPパラメータを更新します `backend.json` ファイル。CHAPシークレットを更新し、を使用する必要があります `tridentctl update` 変更を反映するためのコマンドです。

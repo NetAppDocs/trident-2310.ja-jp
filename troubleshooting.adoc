@@ -16,6 +16,7 @@ Astra Trident のインストール中および使用中に発生する可能性
 
 
 
+[[general-troubleshooting]]
 == 全般的なトラブルシューティング
 
 * Tridentポッドが正常に起動しないと（Tridentポッドがで停止した場合など） `ContainerCreating` 準備が完了したコンテナが2つ未満のフェーズ）を実行中であること `kubectl -n trident describe deployment trident` および `kubectl -n trident describe pod trident-********-****` 詳細な分析情報を提供できます。kubeletログの取得（例：Via `journalctl -xeu kubelet`)また有用である場合もある。
@@ -68,6 +69,7 @@ tridentctl を使用してインストールされます::
 
 
 
+[[unsuccessful-trident-deployment-using-the-operator]]
 == オペレータを使用したTridentの導入に失敗
 
 オペレータを使用してTridentを導入している場合は、ステータスがになります `TridentOrchestrator` からの変更 `Installing` 終了： `Installed`。を確認した場合は `Failed` ステータスが表示され、オペレータが単独でリカバリできない場合は、次のコマンドを実行してオペレータのログを確認する必要があります。
@@ -143,6 +145,7 @@ trident-operator-766f7b8658-ldzsv   1/1     Running            0          8m17s
 
 
 
+[[unsuccessful-trident-deployment-using-tridentctl]]
 == Tridentの導入に失敗しました `tridentctl`
 
 何が問題になったかを確認するには、を使用してインストーラを再実行します ``-d`` 引数。デバッグモードをオンにして、問題の内容を理解するのに役立ちます。
@@ -165,6 +168,7 @@ INFO Trident uninstallation succeeded.
 ----
 
 
+[[completely-remove-astra-trident-and-crds]]
 == Astra TridentとCRDを完全に削除
 
 Astra Tridentと作成されたCRDと関連するカスタムリソースをすべて完全に削除できます。
@@ -204,12 +208,14 @@ tridentctl obliviate crd
 ====
 
 
+[[nvme-node-unstaging-failure-with-rwx-raw-block-namespaces-o-kubernetes-1-26]]
 == RWX rawブロックネームスペースo Kubernetes 1.26でNVMeノードのステージング解除が失敗する
 
 Kubernetes 1.26を実行している場合、RWX rawブロックネームスペースでNVMe/TCPを使用すると、ノードのステージング解除が失敗することがあります。次のシナリオは、障害に対する回避策を提供します。または、Kubernetesを1.27にアップグレードすることもできます。
 
 
 
+[[deleted-the-namespace-and-pod]]
 === ネームスペースとポッドが削除されました
 
 Astra Tridentで管理されるネームスペース（NVMeの永続的ボリューム）をポッドに接続したシナリオを考えてみましょう。ネームスペースをONTAPバックエンドから直接削除すると、ポッドを削除しようとすると、ステージング解除プロセスが停止します。このシナリオは、Kubernetesクラスタやその他の機能には影響しません。
@@ -219,6 +225,7 @@ Astra Tridentで管理されるネームスペース（NVMeの永続的ボリュ
 
 
 
+[[blocked-datalifs]]
 === ブロックされたデータLIF
 
  If you block (or bring down) all the dataLIFs of the NVMe Astra Trident backend, the unstaging process gets stuck when you attempt to delete the pod. In this scenario, you cannot run any NVMe CLI commands on the Kubernetes node.
@@ -227,6 +234,7 @@ Astra Tridentで管理されるネームスペース（NVMeの永続的ボリュ
 
 
 
+[[deleted-namespace-mapping]]
 === ネームスペースマッピングが削除され
 
  If you remove the `hostNQN` of the worker node from the corresponding subsystem, the unstaging process gets stuck when you attempt to delete the pod. In this scenario, you cannot run any NVMe CLI commands on the Kubernetes node.

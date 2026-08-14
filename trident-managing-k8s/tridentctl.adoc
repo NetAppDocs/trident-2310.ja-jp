@@ -16,6 +16,7 @@ summary: Trident へのシンプルなアクセスを提供するコマンドラ
 
 
 
+[[commands-and-global-flags]]
 == コマンドとグローバルフラグ
 
 走れ `tridentctl help` 使用可能なコマンドのリストを取得するには `tridentctl` または、 `--help` 特定のコマンドのオプションとフラグのリストを取得するには、任意のコマンドにフラグを付けます。
@@ -70,10 +71,12 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 ====
 
 
+[[command-options-and-flags]]
 == コマンドオプションとフラグ
 
 
 
+[[create]]
 === 作成
 
 を使用します `create` Astra Tridentにリソースを追加するコマンド。
@@ -85,6 +88,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[delete]]
 === 削除
 
 を使用します `delete` コマンドを使用して、Astra Tridentから1つ以上のリソースを削除します。
@@ -99,6 +103,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[get]]
 === 取得
 
 を使用します `get` Astra Tridentから1つ以上のリソースを取得するためのコマンドです。
@@ -116,6 +121,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[images]]
 === イメージ
 
 使用 `images` Astra Tridentが必要とするコンテナイメージの表を出力するためのフラグ。
@@ -128,6 +134,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[import-volume]]
 === ボリュームをインポートします
 
 を使用します `import volume` コマンドを使用して、既存のボリュームをAstra Tridentにインポートします。
@@ -142,6 +149,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[install]]
 === をインストールします
 
 を使用します `install` Astra Tridentのインストールにフラグを付けます。
@@ -169,6 +177,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[logs]]
 === ログ
 
 使用 `logs` Astra Tridentからログを印刷するためのフラグ。
@@ -185,6 +194,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[send]]
 === 送信
 
 を使用します `send` Astra Tridentからリソースを送信するコマンド。
@@ -196,6 +206,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[uninstall]]
 === をアンインストールします
 
 使用 `uninstall` Astra Tridentをアンインストールするためのフラグ。
@@ -208,6 +219,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[update]]
 === 更新
 
 を使用します `update` Astra Tridentでリソースを変更するコマンド。
@@ -219,6 +231,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[update-backend-state]]
 === バックエンドの状態を更新
 
 を使用します `update backend state` バックエンド処理を一時停止または再開するコマンド。
@@ -238,6 +251,7 @@ WARNING: Trident REST インターフェイスは、 127.0.0.1 （ IPv4 の場�
 
 
 
+[[version]]
 === バージョン
 
 使用 `version` のバージョンを印刷するためのフラグ `tridentctl` 実行中のTridentサービス

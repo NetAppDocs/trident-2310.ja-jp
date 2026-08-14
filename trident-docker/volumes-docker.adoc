@@ -16,6 +16,7 @@ summary: 'ボリュームを作成するには、標準を使用します `docke
 
 
 
+[[create-a-volume]]
 == ボリュームを作成します
 
 * デフォルトの名前を使用して、ドライバでボリュームを作成します。
@@ -48,6 +49,7 @@ TIP: ボリュームサイズは、オプションの単位（ 10G 、 20GB 、 
 
 
 
+[[remove-a-volume]]
 == ボリュームを削除します
 
 * 他の Docker ボリュームと同様にボリュームを削除します。
@@ -66,6 +68,7 @@ Astra Trident for Docker をアップグレードするには、次の手順を�
 
 
 
+[[clone-a-volume]]
 == ボリュームのクローンを作成します
 
 を使用する場合 `ontap-nas`、 `ontap-san`、 `solidfire-san`および `gcp-cvs storage drivers`Tridentがボリュームをクローニングできます。を使用する場合 `ontap-nas-flexgroup` または `ontap-nas-economy` ドライバ、クローニングはサポートされていません。既存のボリュームから新しいボリュームを作成すると、新しい Snapshot が作成されます。
@@ -92,6 +95,7 @@ docker volume create -d <driver_name> --name <new_name> -o from=<source_docker_v
 
 
 
+[[example]]
 === 例
 
 [listing]
@@ -128,6 +132,7 @@ docker volume rm volFromSnap
 ----
 
 
+[[access-externally-created-volumes]]
 == 外部で作成されたボリュームにアクセス
 
 Tridentを使用すると、外部で作成されたブロックデバイス（またはそのクローン）にTrident *からアクセスできます。Tridentは、パーティションがなく、Astra Tridentでサポートされているファイルシステム（など）の場合にのみ利用できます `ext4`-フォーマット済み `/dev/sdc1` Astra Trident経由ではアクセスできません）。

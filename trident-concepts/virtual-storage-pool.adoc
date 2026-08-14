@@ -16,6 +16,7 @@ summary: 仮想プールは、Astra Tridentのストレージバックエンド�
 
 
 
+[[learn-about-virtual-pools]]
 == 仮想プールについて説明します
 
 ストレージ管理者は、任意のAstra TridentバックエンドにJSONまたはYAML定義ファイルで仮想プールを定義できます。

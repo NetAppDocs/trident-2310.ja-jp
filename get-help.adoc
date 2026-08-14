@@ -16,6 +16,7 @@ NetAppは、Astra Tridentをさまざまな方法でサポートします。ナ�
 
 
 
+[[astra-trident-support-lifecycle]]
 == Astra Tridentのサポートライフサイクル
 
 Astra Tridentでは、バージョンに応じて3つのレベルのサポートが提供されます。を参照してください link:https://mysupport.netapp.com/site/info/version-support["定義に対するNetAppソフトウェアバージョンのサポート"^]。
@@ -49,28 +50,32 @@ NOTE: 最新のTridentバージョンサポートスケジュールについて�
 
 
 
+[[self-support]]
 == セルフサポート
 
 トラブルシューティングに関する記事の包括的なリストについては、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Trident_Kubernetes["ネットアップナレッジベース（ログインが必要）"^]。また、 Astra に関連する問題のトラブルシューティングに関する情報も参照できます https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra["こちらをご覧ください"^]。
 
 
 
+[[community-support]]
 == コミュニティサポート
 
 ネットアップのAstraにはコンテナユーザ（Astra Trident開発者を含む）を集めた活発なパブリックコミュニティがあります link:https://discord.gg/NetApp["チャネルを外します"^]。プロジェクトに関する一般的な質問をしたり、同じような気のある同僚と関連するトピックについて話し合うのには、この場所が最適です。
 
 
 
+[[netapp-technical-support]]
 == NetAppテクニカルサポート
 
 Astra Tridentのサポートを受けるには、を使用してサポートバンドルを作成してください `tridentctl logs -a -n trident` に送信します `NetApp Support <Getting Help>`。
 
 
 
+[[for-more-information]]
 == を参照してください。
 
-* link:https://cloud.netapp.com/blog/topic/astra["Astra ブログ"^]
+* link:https://www.netapp.com/blog/["Astra ブログ"^]
 * link:https://netapp.io/persistent-storage-provisioner-for-kubernetes/["Astra Trident のブログ"^]
-* link:https://cloud.netapp.com/kubernetes-hub["Kubernetes ハブ"^]
+* link:https://www.netapp.com/console/["Kubernetes ハブ"^]
 * link:https://netapp.io/["netapp.io のコマンドです"^]
 

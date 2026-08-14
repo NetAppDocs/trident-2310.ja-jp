@@ -16,6 +16,7 @@ Amazon FSX for ONTAP のバックエンド構成オプションについて説�
 
 
 
+[[backend-configuration-options]]
 == バックエンド構成オプション
 
 バックエンド設定オプションについては、次の表を参照してください。
@@ -136,6 +137,7 @@ Kubernetes永続ボリュームのマウントオプションは通常はスト�
 |===
 
 
+[[update-datalif-after-initial-configuration]]
 === 更新 `dataLIF` 初期設定後
 
 初期設定後にデータLIFを変更するには、次のコマンドを実行して、更新されたデータLIFを新しいバックエンドJSONファイルに指定します。
@@ -149,6 +151,7 @@ NOTE: PVCが1つ以上のポッドに接続されている場合は、対応す�
 
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == ボリュームのプロビジョニング用のバックエンド構成オプション
 
 これらのオプションを使用して、のデフォルトプロビジョニングを制御できます `defaults` 設定のセクション。例については、以下の設定例を参照してください。
@@ -192,9 +195,7 @@ NAEがバックエンドで有効になっている場合は、Astra Tridentで�
 詳細については、以下を参照してください。 link:../trident-reco/security-reco.html["Astra TridentとNVEおよびNAEの相互運用性"]。 | `false` 
 
 
-| `luksEncryption` | LUKS暗号化を有効にします。を参照してください link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["Linux Unified Key Setup（LUKS；統合キーセットアップ）を使用"]。
-
-SANのみ。 | "" 
+| `luksEncryption` | LUKS暗号化を有効にします。link:../trident-reco/security-luks.html["Linux Unified Key Setup（LUKS；統合キーセットアップ）を使用"]を参照してください。SANのみ。 | "" 
 
 
 | `tieringPolicy` | 使用する階層化ポリシー	`none` | `snapshot-only` ONTAP 9.5より前のSVM-DR構成の場合 
@@ -215,6 +216,7 @@ SMBのデフォルト： `ntfs`。
 |===
 
 
+[[example]]
 == 例
 
 を使用します `nasType`、 `node-stage-secret-name`および `node-stage-secret-namespace`を使用して、SMBボリュームを指定し、必要なActive Directoryクレデンシャルを指定できます。SMBボリュームは、を使用してサポートされます `ontap-nas` ドライバーのみ。

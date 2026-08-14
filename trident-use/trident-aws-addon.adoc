@@ -16,6 +16,7 @@ Astra Tridentは、KubernetesでのAmazon FSx for NetApp ONTAPストレージ管
 
 
 
+[[prerequisites]]
 == 前提条件
 
 AWS EKS用のAstra Tridentアドオンを設定する前に、次の条件を満たしていることを確認してください。
@@ -32,6 +33,7 @@ AWS EKS用のAstra Tridentアドオンを設定する前に、次の条件を満
 
 
 
+[[steps]]
 == 手順
 
 . EKS Kubernetesクラスタで、*アドオン*タブに移動します。
@@ -61,6 +63,7 @@ image::../media/aws-eks-05.png[AWS EKS 05]
 
 
 
+[[installuninstall-the-astra-trident-eks-add-on-using-cli]]
 == CLIを使用したAstra Trident EKSアドオンのインストールとアンインストール
 
 .CLIを使用してAstra Trident EKSアドオンをインストールします。

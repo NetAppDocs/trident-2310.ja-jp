@@ -16,6 +16,7 @@ summary: '`tridentctl import` または PVC アノテーションを使用して
 
 
 
+[[overview-and-considerations]]
 == 概要と考慮事項
 
 Astra Tridentにボリュームをインポートすると、次のことが可能になります。
@@ -52,6 +53,7 @@ TIP: このオプションは、コンテナ化されたワークロードに Ku
 
 
 
+[[import-a-volume]]
 == ボリュームをインポートします
 
  `tridentctl import`を使用するか、Tridentインポートアノテーションを使用してPVCを作成することで、ボリュームをインポートできます。
@@ -147,12 +149,14 @@ Trident はボリュームを自動的にインポートし、PVC にバイン�
 ====
 
 
+[[examples]]
 == 例
 
 サポートされているドライバについて、次のボリュームインポートの例を確認してください。
 
 
 
+[[ontap-nas-and-ontap-nas-flexgroup]]
 === ONTAP NASおよびONTAP NAS FlexGroup
 
 Astra Tridentでは、を使用したボリュームインポートがサポートされます `ontap-nas` および `ontap-nas-flexgroup` ドライバ。
@@ -260,6 +264,7 @@ spec:
 ====
 
 
+[[ontap-san]]
 === ONTAP SAN
 
 Astra Tridentでは、を使用したボリュームインポートがサポートされます `ontap-san` ドライバ。を使用したボリュームインポートはサポートされていません `ontap-san-economy` ドライバ。
@@ -311,6 +316,7 @@ image:./san-import-igroup.png["iqnおよびクラスタiqnにマッピングさ�
 ====
 
 
+[[element]]
 === 要素（ Element ）
 
 Astra Tridentでは、を使用したNetApp ElementソフトウェアとNetApp HCIボリュームのインポートがサポートされます `solidfire-san` ドライバ。
@@ -332,6 +338,7 @@ tridentctl import volume element_default element-managed -f pvc-basic-import.yam
 ----
 
 
+[[google-cloud-platform]]
 === Google Cloud Platform の 1 つです
 
 Astra Tridentでは、を使用したボリュームインポートがサポートされます `gcp-cvs` ドライバ。
@@ -354,6 +361,7 @@ tridentctl import volume gcpcvs_YEppr adroit-jolly-swift -f <path-to-pvc-file> -
 ----
 
 
+[[azure-netapp-files]]
 === Azure NetApp Files の特長
 
 Astra Tridentでは、を使用したボリュームインポートがサポートされます `azure-netapp-files` ドライバ。
